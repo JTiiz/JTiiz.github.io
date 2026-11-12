@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" color="#3B8FD9"><style>.lg-s,.lg-a{stroke-dasharray:1;stroke-dashoffset:0}
+.lg-n,.lg-dot{transform-box:fill-box;transform-origin:center}
+.lg-s{animation:lg-draw 5s ease-out infinite both}
+.lg-n{animation:lg-pop 5s ease-out infinite both}
+.lg-a{animation:lg-shoot 5s cubic-bezier(.3,.7,.2,1) infinite both}
+.lg-a2{animation-delay:.18s}.lg-a3{animation-delay:.36s}
+.lg-dot{animation:lg-pulse 1.25s ease-in-out infinite}
+@keyframes lg-draw{0%{stroke-dashoffset:1;opacity:0}3%{opacity:1}20%{stroke-dashoffset:0}88%{opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes lg-pop{0%,18%{transform:scale(0);opacity:0}26%{transform:scale(1.25);opacity:1}31%{transform:scale(1)}88%{transform:scale(1);opacity:1}95%,100%{transform:scale(1);opacity:0}}
+@keyframes lg-shoot{0%,30%{stroke-dashoffset:1;opacity:0}32%{opacity:1}52%{stroke-dashoffset:0}84%{opacity:1}92%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes lg-pulse{0%,100%{transform:scale(.7)}50%{transform:scale(1.25)}}
+@media (prefers-reduced-motion:reduce){.lg-s,.lg-n,.lg-a,.lg-dot{animation:none}}</style>
+<g id="logo-art" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="46" cy="74" r="11"/>
+        <circle class="lg-dot" cx="46" cy="74" r="3.6" fill="currentColor" stroke="none"/>
+        <path class="lg-s" pathLength="1" d="M35 74H16"/>
+        <path class="lg-s" pathLength="1" d="M38.2 66.2 28 56V44.5"/>
+        <path class="lg-s" pathLength="1" d="M46 63V44.5"/>
+        <path class="lg-s" pathLength="1" d="M38.2 81.8 26 94v6.5"/>
+        <path class="lg-s" pathLength="1" d="M46 85v15.5"/>
+        <path class="lg-s" pathLength="1" d="M53.8 81.8 64 92h14.5"/>
+        <path class="lg-s" pathLength="1" d="M57 74h31.5"/>
+        <circle class="lg-n" cx="10.5" cy="74" r="5.5"/><circle class="lg-n" cx="28" cy="39" r="5.5"/>
+        <circle class="lg-n" cx="46" cy="39" r="5.5"/><circle class="lg-n" cx="26" cy="106" r="5.5"/>
+        <circle class="lg-n" cx="46" cy="106" r="5.5"/><circle class="lg-n" cx="84" cy="92" r="5.5"/>
+        <circle class="lg-n" cx="94" cy="74" r="5.5"/>
+        <path class="lg-a" pathLength="1" d="M53.8 66.2 106 14M86 14h20v20"/>
+        <path class="lg-a lg-a2" pathLength="1" d="M60 40 80 20M67 20h13v13"/>
+        <path class="lg-a lg-a3" pathLength="1" d="M80 62l20-20M87 42h13v13"/>
+      </g>
+</svg>

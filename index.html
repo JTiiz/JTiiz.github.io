@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio de Jesús Ramírez Durán: automatización e IA aplicadas a procesos reales de gestión, con demos en vídeo.">
+<meta property="og:title" content="Jesús Ramírez · Proyectos de IA y automatización">
+<meta property="og:description" content="Cuatro proyectos con demo en vídeo de menos de un minuto.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>Portfolio Jesús Ramírez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Estilo inspirado en electronjs.org: hero oscuro azul pizarra con acento cian, cuerpo claro, rejilla de características, bloques de terminal y secciones alternas texto/captura */
+:root{
+  --hero:#2B2E3B; --hero-2:#353949; --hero-fg:#F2F4F8; --hero-muted:#B3B9C9;
+  --bg:#FFFFFF; --bg-alt:#F5F6F9; --fg:#1C1E26; --muted:#5A6072; --line:#E2E5EC;
+  --accent:#47848F; --accent-ink:#2F6872; --cyan:#9FEAF9;
+  --term:#1E2029; --term-fg:#D7DCE6;
+  --display:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1B1D25; --bg-alt:#22252F; --fg:#E8EBF2; --muted:#A3A9B8; --line:#343846;
+  --accent:#7CC3CF; --accent-ink:#9FEAF9; --term:#13141A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1B1D25; --bg-alt:#22252F; --fg:#E8EBF2; --muted:#A3A9B8; --line:#343846;
+  --accent:#7CC3CF; --accent-ink:#9FEAF9; --term:#13141A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0}
+img,video{max-width:100%}
+.screen video{width:100%;height:100%;object-fit:cover;display:block}
+.screen.has-video{padding:0;background:#000}
+body{background:var(--bg);color:var(--fg);font-family:var(--display);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hero)}
+a{color:var(--accent-ink)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
+.inner{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Navbar */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);border-bottom:1px solid #3B3F50}
+.nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-block:8px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--hero-fg);text-decoration:none;font-weight:700}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:var(--hero-muted);text-decoration:none;font-size:15px;font-weight:500}
+.nav ul a:hover{color:var(--hero-fg)}
+
+/* Hero */
+.hero{background:var(--hero);color:var(--hero-fg);text-align:center;overflow:hidden;position:relative}
+.hero .inner{padding-block:72px 88px;display:flex;flex-direction:column;align-items:center;gap:22px;position:relative}
+.logo{color:#4A9BE0;flex:none}
+.logo-hero{width:156px;height:156px}
+/*logo-anim*/
+.lg-s,.lg-a{stroke-dasharray:1;stroke-dashoffset:0}
+.lg-n,.lg-dot{transform-box:fill-box;transform-origin:center}
+.lg-s{animation:lg-draw 5s ease-out infinite both}
+.lg-n{animation:lg-pop 5s ease-out infinite both}
+.lg-a{animation:lg-shoot 5s cubic-bezier(.3,.7,.2,1) infinite both}
+.lg-a2{animation-delay:.18s}.lg-a3{animation-delay:.36s}
+.lg-dot{animation:lg-pulse 1.25s ease-in-out infinite}
+@keyframes lg-draw{0%{stroke-dashoffset:1;opacity:0}3%{opacity:1}20%{stroke-dashoffset:0}88%{opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes lg-pop{0%,18%{transform:scale(0);opacity:0}26%{transform:scale(1.25);opacity:1}31%{transform:scale(1)}88%{transform:scale(1);opacity:1}95%,100%{transform:scale(1);opacity:0}}
+@keyframes lg-shoot{0%,30%{stroke-dashoffset:1;opacity:0}32%{opacity:1}52%{stroke-dashoffset:0}84%{opacity:1}92%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes lg-pulse{0%,100%{transform:scale(.7)}50%{transform:scale(1.25)}}
+@media (prefers-reduced-motion:reduce){.lg-s,.lg-n,.lg-a,.lg-dot{animation:none}}
+/*end-logo-anim*/
+.hero h1{font-size:clamp(32px,5.4vw,54px);font-weight:800;letter-spacing:-.02em;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero p{margin:0;color:var(--hero-muted);font-size:clamp(17px,2vw,20px);max-width:640px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--cyan);color:#1C1E26}
+.btn-ghost{color:var(--hero-fg);border:1px solid #5A6072}
+.btn-ghost:hover{background:var(--hero-2)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;font-family:var(--mono);font-size:13px;color:var(--hero-muted)}
+.badges span{border:1px solid #454A5C;border-radius:999px;padding:3px 12px}
+
+/* Features */
+section{padding-block:80px}
+.alt{background:var(--bg-alt)}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;max-width:680px}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-.01em}
+.sec-head p{margin:0;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 40px}
+.feat{display:flex;flex-direction:column;gap:8px;min-width:0}
+.feat svg{width:30px;height:30px;color:var(--accent)}
+.feat h3{font-size:18px;font-weight:700}
+.feat p{margin:0;color:var(--muted);font-size:15px}
+
+/* Projects */
+.project{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center;padding-block:56px;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:0;padding-top:0}
+.project.flip .shot{order:2}
+@media (max-width:900px){.project.flip .shot{order:0}}
+.copy{display:flex;flex-direction:column;gap:14px;min-width:0}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
+.copy h3{font-size:clamp(24px,2.8vw,30px);font-weight:700;letter-spacing:-.01em}
+.copy p{margin:0;color:var(--muted)}
+.copy ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.copy li{display:flex;gap:10px;font-size:15px}
+.copy li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--accent)}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.links a{text-decoration:none}.links a:hover{text-decoration:underline}
+
+/* App window holding the video */
+.shot{background:var(--hero);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(20,22,30,.45);max-width:100%;min-width:0}
+.shot .bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--hero-2)}
+.shot .bar i{width:11px;height:11px;border-radius:50%;background:#5A6072}
+.shot .bar span{margin-left:10px;font-family:var(--mono);font-size:12px;color:var(--hero-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen{aspect-ratio:16/9;max-width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--hero-muted);font-size:14px;text-align:center;padding:16px;
+  background:radial-gradient(circle at 50% 40%,#3A3F52 0,#2B2E3B 70%)}
+.play{width:62px;height:62px;border-radius:50%;border:2px solid var(--cyan);display:grid;place-items:center}
+.play svg{width:22px;height:22px;margin-left:4px;fill:var(--cyan)}
+
+/* Terminal */
+.terminal-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center}
+.terminal{background:var(--term);color:var(--term-fg);border-radius:12px;font-family:var(--mono);font-size:14px;line-height:1.8;overflow-x:auto;min-width:0}
+.terminal .bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid #2C2F3B}
+.terminal .bar i{width:11px;height:11px;border-radius:50%;background:#454A5C}
+.terminal pre{margin:0;padding:18px 20px}
+.terminal .p{color:#7CC3CF}.terminal .c{color:#7F8597}.terminal .ok{color:#A8E6A1}
+
+/* Stack */
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack span{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:8px 14px;font-size:14px;font-weight:500}
+
+/* Footer */
+footer{background:var(--hero);color:var(--hero-muted);font-size:14px}
+footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px}
+.cols h4{margin:0 0 10px;color:var(--hero-fg);font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.cols a{color:var(--hero-muted);text-decoration:none}.cols a:hover{color:var(--cyan)}
+.legal{border-top:1px solid #3B3F50;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.mail{font-family:var(--mono);color:var(--hero-fg);user-select:all}
+</style>
+
+</head>
+<body>
+<nav class="nav" aria-label="Principal">
+  <div class="inner">
+    <a class="brand" href="#inicio">
+      <svg class="logo" width="32" height="32" viewBox="0 0 120 120" aria-hidden="true"><use href="#logo-art"/></svg>
+      Jesús Ramírez
+    </a>
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="inner">
+    <svg class="logo logo-hero" viewBox="0 0 120 120" aria-hidden="true">
+      <g id="logo-art" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="46" cy="74" r="11"/>
+        <circle class="lg-dot" cx="46" cy="74" r="3.6" fill="currentColor" stroke="none"/>
+        <path class="lg-s" pathLength="1" d="M35 74H16"/>
+        <path class="lg-s" pathLength="1" d="M38.2 66.2 28 56V44.5"/>
+        <path class="lg-s" pathLength="1" d="M46 63V44.5"/>
+        <path class="lg-s" pathLength="1" d="M38.2 81.8 26 94v6.5"/>
+        <path class="lg-s" pathLength="1" d="M46 85v15.5"/>
+        <path class="lg-s" pathLength="1" d="M53.8 81.8 64 92h14.5"/>
+        <path class="lg-s" pathLength="1" d="M57 74h31.5"/>
+        <circle class="lg-n" cx="10.5" cy="74" r="5.5"/><circle class="lg-n" cx="28" cy="39" r="5.5"/>
+        <circle class="lg-n" cx="46" cy="39" r="5.5"/><circle class="lg-n" cx="26" cy="106" r="5.5"/>
+        <circle class="lg-n" cx="46" cy="106" r="5.5"/><circle class="lg-n" cx="84" cy="92" r="5.5"/>
+        <circle class="lg-n" cx="94" cy="74" r="5.5"/>
+        <path class="lg-a" pathLength="1" d="M53.8 66.2 106 14M86 14h20v20"/>
+        <path class="lg-a lg-a2" pathLength="1" d="M60 40 80 20M67 20h13v13"/>
+        <path class="lg-a lg-a3" pathLength="1" d="M80 62l20-20M87 42h13v13"/>
+      </g>
+    </svg>
+    <h1>Automatización e IA aplicadas a <em>procesos reales de gestión</em></h1>
+    <p>Ingeniero de Organización Industrial. Convierto tareas repetitivas de oficina en herramientas que funcionan solas. Cada proyecto incluye una demo en vídeo.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#proyectos">Ver las demos <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="https://github.com/JTiiz">GitHub</a>
+    </div>
+    <div class="badges"><span>4 proyectos</span><span>demos en vídeo</span><span>Ribera del Fresno · Badajoz</span></div>
+  </div>
+</header>
+
+<section id="como-trabajo">
+  <div class="inner">
+    <div class="sec-head">
+      <h2>Cómo trabajo</h2>
+      <p>Herramientas pensadas para quien las usa cada día, no para lucirse en una presentación.</p>
+    </div>
+    <div class="features">
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+        <h3>Del proceso a la herramienta</h3>
+        <p>Primero entiendo el flujo de trabajo real; después lo automatizo con criterio de organización industrial.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+        <h3>Con lo que ya tienes</h3>
+        <p>Excel, PDF y web: soluciones que encajan en el entorno de oficina sin cambiar de sistema.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Horas ahorradas</h3>
+        <p>Tareas semanales que pasan de una mañana de trabajo manual a unos minutos.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
+        <h3>Datos protegidos</h3>
+        <p>Las demos usan siempre datos ficticios. La información real no sale de su entorno.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+        <h3>IA como copiloto</h3>
+        <p>Desarrollo apoyado en asistentes de IA, con revisión y pruebas sobre casos reales.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg>
+        <h3>Ampliable</h3>
+        <p>Cada herramienta está documentada para poder mantenerla y añadir funciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos" class="alt">
+  <div class="inner">
+    <div class="sec-head">
+      <h2>Proyectos</h2>
+      <p>Cada demo dura menos de un minuto.</p>
+    </div>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker">Web app · Algoritmos</span>
+        <h3>Route Detour Optimizer</h3>
+        <p>Calcula el desvío mínimo para añadir paradas a una ruta, con un algoritmo basado en Dijkstra sobre Google Maps.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Next.js 14, TypeScript y Tailwind</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Supabase y despliegue en Vercel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integración continua y guía de instalación</li>
+        </ul>
+        <div class="links"><a href="#">Probar demo →</a><a href="#">Código fuente →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>route-detour-optimizer.vercel.app</span></div>
+        <div class="screen" data-video="videos/route-detour-optimizer.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · el mapa calcula el desvío]</div></div>
+    </article>
+
+    <article class="project flip">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Control_Comisiones.xlsm</span></div>
+        <div class="screen" data-video="videos/control-comisiones.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 40 s · alta de registro y panel actualizado]</div></div>
+      <div class="copy">
+        <span class="kicker">Excel · VBA · Automatización</span>
+        <h3>Control de comisiones de servicio</h3>
+        <p>Seguimiento de asignaciones, estados, personal y solicitudes de anticipo en un solo libro.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Panel con indicadores calculados automáticamente</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Alertas por urgencia y próximas salidas por fecha</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Registro validado y sincronizado con macros</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker">PDF · Consolidación</span>
+        <h3>Consolidador de programación semanal</h3>
+        <p>Une los programas semanales de cinco departamentos en un único documento, conservando el formato y ajustando solo las fechas.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Entrada: varios PDF con formatos distintos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Salida: un programa listo para difundir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>De trabajo manual semanal a minutos</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>programa_semanal.pdf</span></div>
+        <div class="screen" data-video="videos/programacion-semanal.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · entran 5 PDF, sale 1]</div></div>
+    </article>
+
+    <article class="project flip">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>resumen diario · 08:00</span></div>
+        <div class="screen" data-video="videos/buscador-convocatorias.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · aviso de convocatorias en el móvil]</div></div>
+      <div class="copy">
+        <span class="kicker">Agente IA · Tarea programada</span>
+        <h3>Buscador automático de convocatorias</h3>
+        <p>Revisa cada mañana las convocatorias públicas abiertas y filtra por zona, tipo de plaza y nivel.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Ayuntamientos, comunidad autónoma y Estado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Filtro por distancia y perfil profesional</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Resumen diario directo al móvil</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="inner terminal-wrap">
+    <div class="copy">
+      <span class="kicker">Stack</span>
+      <h3>Herramientas con las que construyo</h3>
+      <p>Del libro de Excel a la aplicación web desplegada, según lo que pida cada problema.</p>
+      <div class="stack"><span>Excel / VBA</span><span>Python</span><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span><span>GitHub Actions</span><span>Asistentes de IA</span></div>
+    </div>
+    <div class="terminal" role="img" aria-label="Terminal con el despliegue de la demo">
+      <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c"># clonar y arrancar la demo</span>
+<span class="p">$</span> git clone github.com/JTiiz/route-detour-optimizer
+<span class="p">$</span> npm install
+<span class="p">$</span> npm run dev
+<span class="ok">✓ Ready on http://localhost:3000</span></pre>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="inner">
+    <div class="cols">
+      <div><h4>Proyectos</h4><ul><li><a href="#proyectos">Route Detour Optimizer</a></li><li><a href="#proyectos">Control de comisiones</a></li><li><a href="#proyectos">Programación semanal</a></li><li><a href="#proyectos">Buscador de convocatorias</a></li></ul></div>
+      <div><h4>Perfil</h4><ul><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><span class="mail">[TU EMAIL]</span></li><li>Ribera del Fresno, Badajoz</li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Jesús Ramírez Durán</span><span>Publicado con GitHub Pages</span></div>
+  </div>
+</footer>
+
+<script>
+// Si existe el vídeo en /videos, sustituye el marcador por el reproductor
+document.querySelectorAll('.screen[data-video]').forEach(function(box){
+  var v=document.createElement('video');
+  v.src=box.dataset.video; v.muted=true; v.loop=true; v.playsInline=true; v.controls=true; v.preload='metadata';
+  v.addEventListener('loadeddata',function(){box.innerHTML='';box.classList.add('has-video');box.appendChild(v);});
+});
+</script>
+</body>
+</html>
