@@ -4,6 +4,8 @@ Coloca aquí los vídeos de las demos con estos nombres exactos (formato MP4, H.
   control-comisiones.mp4
   programacion-semanal.mp4
   buscador-convocatorias.mp4
+  youtube-qa-chatbot.mp4
+  iron-kaggle.mp4
 
 Si un vídeo no está, la web muestra el marcador con el icono de play.
 Usa siempre datos ficticios en las grabaciones.
