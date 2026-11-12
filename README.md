@@ -9,6 +9,8 @@ Automatización e IA aplicadas a procesos reales de gestión. Cada proyecto incl
 - Control de comisiones de servicio: Excel + VBA con panel y alertas
 - Consolidador de programación semanal: unión de varios PDF en uno
 - Buscador automático de convocatorias: agente diario con filtros por zona y perfil
+- YouTube QA Chatbot: RAG sobre transcripciones de YouTube (LangChain, ChromaDB, Gradio)
+- Iron Kaggle: predicción de ventas con machine learning (pandas, scikit-learn)
 
 ## Estructura
 - `index.html`: la web completa (HTML + CSS, sin dependencias)
