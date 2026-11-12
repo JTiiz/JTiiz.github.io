@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portfolio de Jesús Ramírez Durán: automatización e IA aplicadas a procesos reales de gestión, con demos en vídeo.">
-<meta property="og:title" content="Jesús Ramírez · Proyectos de IA y automatización">
-<meta property="og:description" content="Seis proyectos con demo en vídeo de menos de un minuto.">
+<meta name="description" content="Jesús Ramírez Durán: Capitán de Artillería e Ingeniero de Organización Industrial especializado en ingeniería de IA, agentes, RAG y LLM.">
+<meta property="og:title" content="Jesús Ramírez Durán · AI Engineering y sistemas de mando y control">
+<meta property="og:description" content="Trayectoria y proyectos de IA, datos y automatización.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <title>Portfolio Jesús Ramírez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@ section{padding-block:80px}
 /* Projects */
 .project{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center;padding-block:56px;border-top:1px solid var(--line)}
 .project:first-of-type{border-top:0;padding-top:0}
-.project.flip .shot{order:2}
+.project.flip .shot{order:-1}
 @media (max-width:900px){.project.flip .shot{order:0}}
 .copy{display:flex;flex-direction:column;gap:14px;min-width:0}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
@@ -105,6 +105,19 @@ section{padding-block:80px}
 .copy li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--accent)}
 .links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
 .links a{text-decoration:none}.links a:hover{text-decoration:underline}
+
+/* Trayectoria */
+.cv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px 56px;align-items:start}
+.cv h3{font-size:14px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent-ink);font-weight:500;margin-bottom:20px}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 28px 24px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl li.now::before{background:var(--accent)}
+.tl h4{margin:0;font-size:17px;font-weight:700;line-height:1.3}
+.tl .org{font-weight:500}
+.tl .when{display:block;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:2px 0 6px}
+.tl p{margin:0;color:var(--muted);font-size:15px}
 
 /* App window holding the video */
 .shot{background:var(--hero);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(20,22,30,.45);max-width:100%;min-width:0}
@@ -148,6 +161,7 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
       Jesús Ramírez
     </a>
     <ul>
+      <li><a href="#trayectoria">Trayectoria</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
       <li><a href="#stack">Stack</a></li>
@@ -178,127 +192,53 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
         <path class="lg-a lg-a3" pathLength="1" d="M80 62l20-20M87 42h13v13"/>
       </g>
     </svg>
-    <h1>Automatización e IA aplicadas a <em>procesos reales de gestión</em></h1>
-    <p>Ingeniero de Organización Industrial. Convierto tareas repetitivas de oficina en herramientas que funcionan solas. Cada proyecto incluye una demo en vídeo.</p>
+    <h1>De los sistemas de mando y control a la <em>ingeniería de IA</em></h1>
+    <p>Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Industrial. Llevo la disciplina de mando y la gestión de proyectos técnicos al desarrollo de agentes de IA, sistemas RAG y aplicaciones con LLM.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="#proyectos">Ver las demos <span aria-hidden="true">→</span></a>
+      <a class="btn btn-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#trayectoria">Trayectoria</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a>
       <a class="btn btn-ghost" href="https://github.com/JTiiz">GitHub</a>
     </div>
-    <div class="badges"><span>6 proyectos</span><span>demos en vídeo</span><span>Ribera del Fresno · Badajoz</span></div>
+    <div class="badges"><span>Capitán OF-2</span><span>AI Engineering · Ironhack</span><span>NLP · RAG · LLM</span><span>Badajoz · Extremadura</span></div>
   </div>
 </header>
 
-<section id="como-trabajo">
+<section id="trayectoria" class="alt">
   <div class="inner">
     <div class="sec-head">
-      <h2>Cómo trabajo</h2>
-      <p>Herramientas pensadas para quien las usa cada día, no para lucirse en una presentación.</p>
+      <h2>Trayectoria</h2>
+      <p>Oficial del Ejército de Tierra con experiencia en sistemas de mando y control, ahora centrado en la ingeniería de IA.</p>
     </div>
-    <div class="features">
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
-        <h3>Del proceso a la herramienta</h3>
-        <p>Primero entiendo el flujo de trabajo real; después lo automatizo con criterio de organización industrial.</p>
+    <div class="cv">
+      <div>
+        <h3>Experiencia</h3>
+        <ul class="tl">
+          <li class="now"><h4>Jefe de la Sección de Operaciones · <span class="org">Ejército de Tierra</span></h4><span class="when">abr. 2026 – actualidad · Badajoz</span><p>Batallón de Cuartel General de la Brigada «Extremadura» XI. Coordinación de alto nivel entre áreas y unidades, incluidas inteligencia y escuadras de drones.</p></li>
+          <li><h4>Technical Officer · <span class="org">GMV</span></h4><span class="when">jun. 2025 – dic. 2025 · San Fernando</span><p>Dirigí el proyecto de un nuevo sistema de mando y control de artillería de costa con ingenieros de GMV: requisitos del Ejército, seguimiento de la implantación e integraciones.</p></li>
+          <li><h4>Profesor asociado · <span class="org">Universidad de Zaragoza</span></h4><span class="when">sept. 2025 – oct. 2025 · San Fernando</span><p>Tutor de un Trabajo Fin de Grado sobre la remodelación de sistemas de mando y control de costa.</p></li>
+          <li><h4>Jefe de Batería · <span class="org">Ejército de Tierra</span></h4><span class="when">jun. 2025 – nov. 2025</span><p>Batería de Mando y Control de Artillería de Costa.</p></li>
+          <li><h4>Jefe de Sección · <span class="org">Ejército de Tierra</span></h4><span class="when">sept. 2021 – ene. 2026</span><p>Sección de Artillería de Costa. Técnicas de guerra electrónica y unidades de artillería de costa y de campaña.</p></li>
+        </ul>
       </div>
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
-        <h3>Con lo que ya tienes</h3>
-        <p>Excel, PDF y web: soluciones que encajan en el entorno de oficina sin cambiar de sistema.</p>
-      </div>
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <h3>Horas ahorradas</h3>
-        <p>Tareas semanales que pasan de una mañana de trabajo manual a unos minutos.</p>
-      </div>
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
-        <h3>Datos protegidos</h3>
-        <p>Las demos usan siempre datos ficticios. La información real no sale de su entorno.</p>
-      </div>
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
-        <h3>IA como copiloto</h3>
-        <p>Desarrollo apoyado en asistentes de IA, con revisión y pruebas sobre casos reales.</p>
-      </div>
-      <div class="feat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg>
-        <h3>Ampliable</h3>
-        <p>Cada herramienta está documentada para poder mantenerla y añadir funciones.</p>
+      <div>
+        <h3>Formación</h3>
+        <ul class="tl">
+          <li class="now"><h4>AI Engineering · <span class="org">Ironhack</span></h4><span class="when">feb. 2026 – may. 2026 · certificado abr. 2026</span><p>Más de 400 horas de Python, machine learning, NLP, LLM, RAG, bases de datos vectoriales y despliegue de IA.</p></li>
+          <li><h4>Grado en Ingeniería de Organización Industrial · <span class="org">Universidad de Zaragoza</span></h4><span class="when">2016 – 2021</span><p>Gestión de procesos, producción, organización y métodos cuantitativos.</p></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="proyectos" class="alt">
+<section id="proyectos">
   <div class="inner">
     <div class="sec-head">
       <h2>Proyectos</h2>
-      <p>Cada demo dura menos de un minuto.</p>
+      <p>Proyectos de IA del programa de AI Engineering y herramientas de automatización para problemas reales de gestión. Las demos duran menos de un minuto.</p>
     </div>
 
-    <article class="project">
-      <div class="copy">
-        <span class="kicker">Web app · Algoritmos</span>
-        <h3>Route Detour Optimizer</h3>
-        <p>Calcula el desvío mínimo para añadir paradas a una ruta, con un algoritmo basado en Dijkstra sobre Google Maps.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Next.js 14, TypeScript y Tailwind</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Supabase y despliegue en Vercel</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integración continua y guía de instalación</li>
-        </ul>
-        <div class="links"><a href="#">Probar demo →</a><a href="#">Código fuente →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>route-detour-optimizer.vercel.app</span></div>
-        <div class="screen" data-video="videos/route-detour-optimizer.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · el mapa calcula el desvío]</div></div>
-    </article>
-
-    <article class="project flip">
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Control_Comisiones.xlsm</span></div>
-        <div class="screen" data-video="videos/control-comisiones.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 40 s · alta de registro y panel actualizado]</div></div>
-      <div class="copy">
-        <span class="kicker">Excel · VBA · Automatización</span>
-        <h3>Control de comisiones de servicio</h3>
-        <p>Seguimiento de asignaciones, estados, personal y solicitudes de anticipo en un solo libro.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Panel con indicadores calculados automáticamente</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Alertas por urgencia y próximas salidas por fecha</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Registro validado y sincronizado con macros</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="copy">
-        <span class="kicker">PDF · Consolidación</span>
-        <h3>Consolidador de programación semanal</h3>
-        <p>Une los programas semanales de cinco departamentos en un único documento, conservando el formato y ajustando solo las fechas.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Entrada: varios PDF con formatos distintos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Salida: un programa listo para difundir</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>De trabajo manual semanal a minutos</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>programa_semanal.pdf</span></div>
-        <div class="screen" data-video="videos/programacion-semanal.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · entran 5 PDF, sale 1]</div></div>
-    </article>
-
-    <article class="project flip">
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>resumen diario · 08:00</span></div>
-        <div class="screen" data-video="videos/buscador-convocatorias.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · aviso de convocatorias en el móvil]</div></div>
-      <div class="copy">
-        <span class="kicker">Agente IA · Tarea programada</span>
-        <h3>Buscador automático de convocatorias</h3>
-        <p>Revisa cada mañana las convocatorias públicas abiertas y filtra por zona, tipo de plaza y nivel.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Ayuntamientos, comunidad autónoma y Estado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Filtro por distancia y perfil profesional</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Resumen diario directo al móvil</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-    </article>
     <article class="project">
       <div class="copy">
         <span class="kicker">IA generativa · RAG · Agentes</span>
@@ -316,8 +256,6 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
     </article>
 
     <article class="project flip">
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
-        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · comparativa de modelos y predicción]</div></div>
       <div class="copy">
         <span class="kicker">Machine Learning · Predicción</span>
         <h3>Iron Kaggle: predicción de ventas</h3>
@@ -329,7 +267,114 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
         </ul>
         <div class="links"><a href="https://github.com/JTiiz/iron-kaggle">Código fuente →</a></div>
       </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
+        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · comparativa de modelos y predicción]</div></div>
     </article>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker">Agente IA · Tarea programada</span>
+        <h3>Buscador automático de convocatorias</h3>
+        <p>Revisa cada mañana las convocatorias públicas abiertas y filtra por zona, tipo de plaza y nivel.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Ayuntamientos, comunidad autónoma y Estado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Filtro por distancia y perfil profesional</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Resumen diario directo al móvil</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>resumen diario · 08:00</span></div>
+        <div class="screen" data-video="videos/buscador-convocatorias.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · aviso de convocatorias en el móvil]</div></div>
+    </article>
+
+    <article class="project flip">
+      <div class="copy">
+        <span class="kicker">Web app · Algoritmos</span>
+        <h3>Route Detour Optimizer</h3>
+        <p>Calcula el desvío mínimo para añadir paradas a una ruta, con un algoritmo basado en Dijkstra sobre Google Maps.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Next.js 14, TypeScript y Tailwind</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Supabase y despliegue en Vercel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integración continua y guía de instalación</li>
+        </ul>
+        <div class="links"><a href="#">Probar demo →</a><a href="#">Código fuente →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>route-detour-optimizer.vercel.app</span></div>
+        <div class="screen" data-video="videos/route-detour-optimizer.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · el mapa calcula el desvío]</div></div>
+    </article>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker">Excel · VBA · Automatización</span>
+        <h3>Control de comisiones de servicio</h3>
+        <p>Seguimiento de asignaciones, estados, personal y solicitudes de anticipo en un solo libro.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Panel con indicadores calculados automáticamente</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Alertas por urgencia y próximas salidas por fecha</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Registro validado y sincronizado con macros</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Control_Comisiones.xlsm</span></div>
+        <div class="screen" data-video="videos/control-comisiones.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 40 s · alta de registro y panel actualizado]</div></div>
+    </article>
+
+    <article class="project flip">
+      <div class="copy">
+        <span class="kicker">PDF · Consolidación</span>
+        <h3>Consolidador de programación semanal</h3>
+        <p>Une los programas semanales de cinco departamentos en un único documento, conservando el formato y ajustando solo las fechas.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Entrada: varios PDF con formatos distintos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Salida: un programa listo para difundir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>De trabajo manual semanal a minutos</li>
+        </ul>
+        <div class="links"><a href="#">Ver demo →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>programa_semanal.pdf</span></div>
+        <div class="screen" data-video="videos/programacion-semanal.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · entran 5 PDF, sale 1]</div></div>
+    </article>
+  </div>
+</section>
+
+<section id="como-trabajo" class="alt">
+  <div class="inner">
+    <div class="sec-head">
+      <h2>Cómo trabajo</h2>
+      <p>Liderazgo militar, ingeniería y IA: un perfil pensado para llevar la tecnología a entornos exigentes.</p>
+    </div>
+    <div class="features">
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+        <h3>Liderazgo probado</h3>
+        <p>Más de cinco años al mando de unidades y equipos: sección, batería y, hoy, la sección de operaciones de un batallón de Cuartel General.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+        <h3>Del requisito al sistema</h3>
+        <p>He definido requisitos, seguido la implantación y participado en las integraciones de un nuevo sistema de mando y control junto a ingenieros de GMV.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l2.8 8M16 7.5l-2.8 8M8.5 6h7"/></svg>
+        <h3>IA agéntica y RAG</h3>
+        <p>Agentes con herramientas y memoria, bases de datos vectoriales y evaluación con métricas (RAGAS, LangSmith) para medir, no suponer.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+        <h3>Datos y modelos</h3>
+        <p>Limpieza, ingeniería de variables y comparación de modelos de machine learning con métricas claras.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
+        <h3>Seguridad y confidencialidad</h3>
+        <p>Acostumbrado a trabajar con información clasificada. Las demos usan siempre datos ficticios.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Mentalidad de organización industrial</h3>
+        <p>Primero entiendo el proceso; después lo automatizo para ahorrar horas de trabajo repetitivo.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -338,16 +383,16 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
     <div class="copy">
       <span class="kicker">Stack</span>
       <h3>Herramientas con las que construyo</h3>
-      <p>Del libro de Excel a la aplicación web desplegada, según lo que pida cada problema.</p>
-      <div class="stack"><span>Excel / VBA</span><span>Python</span><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span><span>GitHub Actions</span><span>scikit-learn</span><span>LangChain</span><span>ChromaDB</span><span>Asistentes de IA</span></div>
+      <p>Del notebook de datos al agente desplegado, y del libro de Excel a la aplicación web, según lo que pida cada problema.</p>
+      <div class="stack"><span>Python</span><span>LangChain</span><span>OpenAI API</span><span>ChromaDB</span><span>RAGAS</span><span>LangSmith</span><span>Whisper</span><span>Gradio</span><span>pandas</span><span>scikit-learn</span><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Excel / VBA</span><span>GitHub Actions</span></div>
     </div>
-    <div class="terminal" role="img" aria-label="Terminal con el despliegue de la demo">
+    <div class="terminal" role="img" aria-label="Terminal arrancando el YouTube QA Chatbot">
       <div class="bar"><i></i><i></i><i></i></div>
-<pre><span class="c"># clonar y arrancar la demo</span>
-<span class="p">$</span> git clone github.com/JTiiz/route-detour-optimizer
-<span class="p">$</span> npm install
-<span class="p">$</span> npm run dev
-<span class="ok">✓ Ready on http://localhost:3000</span></pre>
+<pre><span class="c"># clonar y arrancar el chatbot</span>
+<span class="p">$</span> git clone github.com/JTiiz/yt_chatbot_final
+<span class="p">$</span> pip install -r requirements.txt
+<span class="p">$</span> python appt.py
+<span class="ok">✓ Running on http://127.0.0.1:7860</span></pre>
     </div>
   </div>
 </section>
@@ -355,9 +400,9 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
 <footer id="contacto">
   <div class="inner">
     <div class="cols">
-      <div><h4>Proyectos</h4><ul><li><a href="#proyectos">Route Detour Optimizer</a></li><li><a href="#proyectos">Control de comisiones</a></li><li><a href="#proyectos">Programación semanal</a></li><li><a href="#proyectos">Buscador de convocatorias</a></li><li><a href="#proyectos">YouTube QA Chatbot</a></li><li><a href="#proyectos">Iron Kaggle</a></li></ul></div>
+      <div><h4>Proyectos</h4><ul><li><a href="#proyectos">YouTube QA Chatbot</a></li><li><a href="#proyectos">Iron Kaggle</a></li><li><a href="#proyectos">Buscador de convocatorias</a></li><li><a href="#proyectos">Route Detour Optimizer</a></li><li><a href="#proyectos">Control de comisiones</a></li><li><a href="#proyectos">Programación semanal</a></li></ul></div>
       <div><h4>Perfil</h4><ul><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
-      <div><h4>Contacto</h4><ul><li><span class="mail">[TU EMAIL]</span></li><li>Ribera del Fresno, Badajoz</li></ul></div>
+      <div><h4>Contacto</h4><ul><li><span class="mail">[TU EMAIL]</span></li><li>Badajoz, Extremadura</li></ul></div>
     </div>
     <div class="legal"><span>© 2026 Jesús Ramírez Durán</span><span>Publicado con GitHub Pages</span></div>
   </div>
