@@ -69,7 +69,7 @@
     <div class="sec-head">
       <h2 data-i18n="proj.title">Projects</h2>
       <p data-i18n="proj.sub">AI and machine learning projects built during the Ironhack AI Engineering programme. All the code is on GitHub.</p>
-      <p class="hint" data-i18n="proj.hint">Hover a card to light it up. Click or tap it to see the details.</p>
+      <p class="hint" data-i18n="proj.hint">Click or tap a card to open the project and its video. All the projects are listed below.</p>
     </div>
     <div class="cards" id="cards">
       <button class="card" type="button" id="card-p1" data-target="proj-p1" data-color="#2F6BFF" style="--c:#2F6BFF;--c2:#0A1A52"><span class="fill"></span><span class="label">— RAG · Agents</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p1.cap">Ask a YouTube video anything.</span><span class="big">YouTube QA.</span><span class="dots"><i></i><i></i><i></i></span></button>
@@ -78,7 +78,7 @@
       <button class="card" type="button" id="card-p4" data-target="proj-p4" data-color="#12A594" style="--c:#12A594;--c2:#06342F"><span class="fill"></span><span class="label">— NLP · TF-IDF</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p4.cap">Fake or real, with up to 99.9% accuracy.</span><span class="big">Fake News.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts with R² above 0.95.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
     </div>
-    <div class="details" id="details" aria-live="polite">
+    <div class="details" id="details">
 
     <article class="project" id="proj-p1">
       <div class="copy">
@@ -163,6 +163,11 @@
   </div>
 </section>
 
+<dialog class="modal" id="project-modal">
+  <button class="modal-close" type="button" id="project-modal-close" aria-label="Close" data-i18n-aria="ui.close">×</button>
+  <div id="project-modal-body"></div>
+</dialog>
+
 <section id="how-i-work" class="alt">
   <div class="inner">
     <div class="sec-head">
@@ -246,30 +251,46 @@ document.querySelectorAll('.screen[data-video]').forEach(function(box){
   v.addEventListener('loadeddata',function(){box.innerHTML='';box.classList.add('has-video');box.appendChild(v);});
 });
 
-// Project cards: a wave drawing on each one, and the selected project's details below
+// Project cards: an animated wave on each one; a click opens the project in a dialog
 (function(){
-  var cards=[].slice.call(document.querySelectorAll('.card')),details=document.getElementById('details');
+  var cards=[].slice.call(document.querySelectorAll('.card')),modal=document.getElementById('project-modal');
   if(!cards.length)return;
-  details.classList.add('single');
-  function wave(cv,color,seed){
-    var dpr=Math.min(window.devicePixelRatio||1,2),W=cv.clientWidth,H=cv.clientHeight;if(!W||!H)return;
-    cv.width=W*dpr;cv.height=H*dpr;var g=cv.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches,visible=true,raf=0,t0=performance.now();
+  function size(cv){var dpr=Math.min(window.devicePixelRatio||1,2),W=cv.clientWidth,H=cv.clientHeight;
+    if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr)}
+    return {W:W,H:H,dpr:dpr}}
+  function wave(cv,color,seed,time){
+    var s=size(cv),W=s.W,H=s.H;if(!W||!H)return;
+    var g=cv.getContext('2d');g.setTransform(s.dpr,0,0,s.dpr,0,0);g.clearRect(0,0,W,H);
     g.globalCompositeOperation='lighter';g.lineWidth=1;g.strokeStyle=color;
-    for(var i=0;i<46;i++){var t=i/45;g.globalAlpha=.10+.5*Math.sin(t*Math.PI);g.beginPath();
-      for(var x=-4;x<=W+4;x+=4){var u=x/W,y=H*.5+Math.sin(u*5.2+seed+t*1.7)*H*.2*(.35+u)+(t-.5)*H*.42*Math.sin(u*3.1+seed*.7);
+    var a=seed+time*.55,b=seed*.7+time*.33;
+    for(var i=0;i<40;i++){var t=i/39;g.globalAlpha=.10+.5*Math.sin(t*Math.PI);g.beginPath();
+      for(var x=-6;x<=W+6;x+=6){var u=x/W,y=H*.5+Math.sin(u*5.2+a+t*1.7)*H*.2*(.35+u)+(t-.5)*H*.42*Math.sin(u*3.1+b);
         if(x<0)g.moveTo(x,y);else g.lineTo(x,y)}
       g.stroke()}
   }
-  function drawAll(){cards.forEach(function(c,i){wave(c.querySelector('canvas'),c.dataset.color,i*1.9+.6)})}
-  function show(card){
-    cards.forEach(function(c){
-      var on=c===card;c.setAttribute('aria-pressed',on?'true':'false');
-      document.getElementById(c.dataset.target).hidden=!on;
-    });
+  function frame(now){
+    var time=(now-t0)/1000;
+    cards.forEach(function(c,i){wave(c.querySelector('canvas'),c.dataset.color,i*1.9+.6,time*(c.matches(':hover,:focus-visible')?2.2:1))});
+    raf=(!still&&visible)?requestAnimationFrame(frame):0;
   }
-  cards.forEach(function(c){c.addEventListener('click',function(){show(c)})});
-  show(cards[0]);drawAll();
-  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(drawAll,150)});
+  frame(t0);
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){
+    visible=e[0].isIntersecting;if(visible&&!raf&&!still)raf=requestAnimationFrame(frame);
+  }).observe(document.getElementById('cards'));
+  if(still)window.addEventListener('resize',function(){frame(t0)});
+
+  var slot=document.getElementById('project-modal-body');
+  function open(card){
+    var copy=document.getElementById(card.dataset.target).cloneNode(true);copy.removeAttribute('id');copy.classList.remove('flip');
+    slot.innerHTML='';slot.appendChild(copy);
+    var v=copy.querySelector('video');if(v){v.muted=true;v.play().catch(function(){})}
+    if(modal.showModal)modal.showModal();else document.getElementById(card.dataset.target).scrollIntoView();
+  }
+  cards.forEach(function(c){c.addEventListener('click',function(){open(c)})});
+  document.getElementById('project-modal-close').addEventListener('click',function(){modal.close()});
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.close()});
+  modal.addEventListener('close',function(){slot.innerHTML=''});
 })();
 </script>
 </body>
