@@ -1,7 +1,10 @@
 Coloca aquí los vídeos de las demos con estos nombres exactos (formato MP4, H.264, máx. ~20 MB cada uno):
 
   youtube-qa-chatbot.mp4
+  review-intelligence.mp4
   cnn-transfer-learning.mp4
+  fake-news-classifier.mp4
+  iron-kaggle.mp4
 
 Si un vídeo no está, la web muestra el marcador con el icono de play.
 Usa siempre datos ficticios en las grabaciones.
