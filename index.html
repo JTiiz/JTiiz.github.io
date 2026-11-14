@@ -69,9 +69,18 @@
     <div class="sec-head">
       <h2 data-i18n="proj.title">Projects</h2>
       <p data-i18n="proj.sub">AI and machine learning projects built during the Ironhack AI Engineering programme. All the code is on GitHub.</p>
+      <p class="hint" data-i18n="proj.hint">Hover a card to light it up. Click or tap it to see the details.</p>
     </div>
+    <div class="cards" id="cards">
+      <button class="card" type="button" id="card-p1" data-target="proj-p1" data-color="#2F6BFF" style="--c:#2F6BFF;--c2:#0A1A52"><span class="fill"></span><span class="label">— RAG · Agents</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p1.cap">Ask a YouTube video anything.</span><span class="big">YouTube QA.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p2" data-target="proj-p2" data-color="#F0452A" style="--c:#F0452A;--c2:#4A0D08"><span class="fill"></span><span class="label">— NLP · LLM</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p2.cap">Reviews in, market report out.</span><span class="big">Review Intel.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p3" data-target="proj-p3" data-color="#8B3DF0" style="--c:#8B3DF0;--c2:#250A52"><span class="fill"></span><span class="label">— CNN · Vision</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p3.cap">Image classification with an F1-score of 0.97.</span><span class="big">CNN Vision.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p4" data-target="proj-p4" data-color="#12A594" style="--c:#12A594;--c2:#06342F"><span class="fill"></span><span class="label">— NLP · TF-IDF</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p4.cap">Fake or real, with up to 99.9% accuracy.</span><span class="big">Fake News.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts with R² above 0.95.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
+    </div>
+    <div class="details" id="details" aria-live="polite">
 
-    <article class="project">
+    <article class="project" id="proj-p1">
       <div class="copy">
         <span class="kicker" data-i18n="p1.k">Generative AI · RAG · Agents · Apr 2026</span>
         <h3 data-i18n="p1.h">YouTube QA Chatbot (RAG)</h3>
@@ -87,7 +96,7 @@
         <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p1.v">[Video 45 s · a question about a video and the agent's answer]</span></div></div>
     </article>
 
-    <article class="project flip">
+    <article class="project flip" id="proj-p2">
       <div class="copy">
         <span class="kicker" data-i18n="p2.k">NLP · Transformers · LLM · Mar 2026</span>
         <h3 data-i18n="p2.h">Review Intelligence Dashboard</h3>
@@ -103,7 +112,7 @@
         <div class="screen" data-video="videos/review-intelligence.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p2.v">[Video 40 s · from a review to the market report]</span></div></div>
     </article>
 
-    <article class="project">
+    <article class="project" id="proj-p3">
       <div class="copy">
         <span class="kicker" data-i18n="p3.k">Computer vision · Deep learning · Mar 2026</span>
         <h3 data-i18n="p3.h">Image recognition with CNN and transfer learning</h3>
@@ -119,7 +128,7 @@
         <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p3.v">[Video 30 s · an image is uploaded and the model classifies it]</span></div></div>
     </article>
 
-    <article class="project flip">
+    <article class="project flip" id="proj-p4">
       <div class="copy">
         <span class="kicker" data-i18n="p4.k">NLP · Text classification · Mar 2026</span>
         <h3 data-i18n="p4.h">Fake news classifier</h3>
@@ -135,7 +144,7 @@
         <div class="screen" data-video="videos/fake-news-classifier.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p4.v">[Video 30 s · the three models compared]</span></div></div>
     </article>
 
-    <article class="project">
+    <article class="project" id="proj-p5">
       <div class="copy">
         <span class="kicker" data-i18n="p5.k">Machine learning · Forecasting · Mar 2026</span>
         <h3 data-i18n="p5.h">Iron Kaggle: sales forecasting</h3>
@@ -150,6 +159,7 @@
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
         <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p5.v">[Video 30 s · model comparison and prediction]</span></div></div>
     </article>
+    </div>
   </div>
 </section>
 
@@ -235,6 +245,32 @@ document.querySelectorAll('.screen[data-video]').forEach(function(box){
   v.src=box.dataset.video; v.muted=true; v.loop=true; v.playsInline=true; v.controls=true; v.preload='metadata';
   v.addEventListener('loadeddata',function(){box.innerHTML='';box.classList.add('has-video');box.appendChild(v);});
 });
+
+// Project cards: a wave drawing on each one, and the selected project's details below
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.card')),details=document.getElementById('details');
+  if(!cards.length)return;
+  details.classList.add('single');
+  function wave(cv,color,seed){
+    var dpr=Math.min(window.devicePixelRatio||1,2),W=cv.clientWidth,H=cv.clientHeight;if(!W||!H)return;
+    cv.width=W*dpr;cv.height=H*dpr;var g=cv.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);
+    g.globalCompositeOperation='lighter';g.lineWidth=1;g.strokeStyle=color;
+    for(var i=0;i<46;i++){var t=i/45;g.globalAlpha=.10+.5*Math.sin(t*Math.PI);g.beginPath();
+      for(var x=-4;x<=W+4;x+=4){var u=x/W,y=H*.5+Math.sin(u*5.2+seed+t*1.7)*H*.2*(.35+u)+(t-.5)*H*.42*Math.sin(u*3.1+seed*.7);
+        if(x<0)g.moveTo(x,y);else g.lineTo(x,y)}
+      g.stroke()}
+  }
+  function drawAll(){cards.forEach(function(c,i){wave(c.querySelector('canvas'),c.dataset.color,i*1.9+.6)})}
+  function show(card){
+    cards.forEach(function(c){
+      var on=c===card;c.setAttribute('aria-pressed',on?'true':'false');
+      document.getElementById(c.dataset.target).hidden=!on;
+    });
+  }
+  cards.forEach(function(c){c.addEventListener('click',function(){show(c)})});
+  show(cards[0]);drawAll();
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(drawAll,150)});
+})();
 </script>
 </body>
 </html>
