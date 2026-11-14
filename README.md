@@ -1,6 +1,5 @@
 # Portfolio · Jesús Ramírez Durán
 
-Spanish Army Artillery Captain and Industrial Engineer focused on AI engineering (agents, RAG, NLP and computer vision).
 
 **Website:** https://jtiiz.github.io
 
