@@ -1,15 +1,22 @@
 # Portfolio · Jesús Ramírez Durán
 
-Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Industrial, especializado en ingeniería de IA (agentes, RAG y LLM). Web con trayectoria y proyectos con demo en vídeo.
+Spanish Army Artillery Captain and Industrial Engineer focused on AI engineering (agents, RAG, NLP and computer vision).
 
-**Web:** https://jtiiz.github.io
+**Website:** https://jtiiz.github.io
 
-## Proyectos
-- YouTube QA Chatbot (RAG): agente sobre vídeos de YouTube (LangChain, ChromaDB, Gradio, LangSmith, RAGAS)
-- Reconocimiento de imágenes con CNN y Transfer Learning (PyTorch, Keras, Flask)
+## Projects
+- [YouTube QA Chatbot (RAG)](https://github.com/JTiiz/yt_chatbot_final): agent over YouTube videos (LangChain, ChromaDB, Gradio, LangSmith, RAGAS)
+- [Review Intelligence Dashboard](https://github.com/JTiiz/amazon-reviews-class-summary): sentiment, categorisation and AI summaries of Amazon reviews (Transformers, LoRA, Streamlit)
+- [Image recognition with CNN and transfer learning](https://github.com/JTiiz/CNN-project) (PyTorch, Keras, Flask)
+- [Fake news classifier](https://github.com/JTiiz/natural-processing-models): comparison of three NLP pipelines (scikit-learn)
+- [Iron Kaggle](https://github.com/JTiiz/iron-kaggle): sales forecasting with machine learning (pandas, scikit-learn)
 
-## Estructura
-- `index.html`: página principal con los proyectos, la forma de trabajo y el stack
-- `trayectoria.html`: experiencia, formación y reconocimientos
-- `style.css`: estilos compartidos por las dos páginas
-- `videos/`: demos en MP4 (ver `videos/LEEME.txt`)
+## Structure
+- `index.html`: main page with the projects, the way of working and the stack
+- `career.html`: experience, education and awards (`trayectoria.html` redirects here)
+- `style.css`: styles shared by both pages
+- `i18n.js`: translations and language selector
+- `videos/`: demo videos in MP4 (see `videos/LEEME.txt`)
+
+## Languages
+The site is written in English. `i18n.js` switches it to Spanish, French, German, Italian or Portuguese according to the visitor's browser language, and the selector in the menu lets them change it. To edit a text, change the English in the HTML and the same key in `i18n.js`.

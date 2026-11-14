@@ -153,3 +153,11 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
 .plain strong{color:var(--fg);display:block;font-size:16px}
 .cv-extra{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
 
+
+/* Language selector */
+.nav ul{align-items:center}
+.lang{appearance:none;-webkit-appearance:none;background:var(--hero-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23B3B9C9' stroke-width='1.6'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5'/%3E%3C/svg%3E") no-repeat right 9px center/11px;color:var(--hero-fg);border:1px solid #454A5C;border-radius:8px;font:500 14px var(--display);padding:6px 28px 6px 10px;cursor:pointer}
+.lang:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.lang option{color:#1C1E26;background:#fff}
+.copy li span{min-width:0}
+.plain li span{display:block}

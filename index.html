@@ -1,36 +1,36 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Jesús Ramírez Durán: Capitán de Artillería e Ingeniero de Organización Industrial especializado en ingeniería de IA, agentes, RAG y LLM.">
-<meta property="og:title" content="Jesús Ramírez Durán · AI Engineering y sistemas de mando y control">
-<meta property="og:description" content="Proyectos de IA: agentes, RAG y visión por computador.">
+<meta name="description" content="Jesús Ramírez Durán: Spanish Army Artillery Captain and Industrial Engineer focused on AI engineering, agents, RAG and computer vision." data-i18n-content="meta.desc">
+<meta property="og:title" content="Jesús Ramírez Durán · AI Engineering">
+<meta property="og:description" content="AI projects: agents, RAG, NLP and computer vision.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
-<title>Portfolio Jesús Ramírez</title>
+<title data-i18n="meta.title">Jesús Ramírez · AI Engineering portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-<nav class="nav" aria-label="Principal">
+<nav class="nav" aria-label="Main">
   <div class="inner">
-    <a class="brand" href="#inicio">
+    <a class="brand" href="#top">
       <svg class="logo" width="32" height="32" viewBox="0 0 120 120" aria-hidden="true"><use href="#logo-art"/></svg>
       Jesús Ramírez
     </a>
     <ul>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#como-trabajo">Cómo trabajo</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="trayectoria.html">Trayectoria</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#how-i-work" data-i18n="nav.how">How I work</a></li>
+      <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+      <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><select id="lang" class="lang" aria-label="Language" data-i18n-aria="nav.lang"><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="pt">Português</option></select></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero" id="inicio">
+<header class="hero" id="top">
   <div class="inner">
     <svg class="logo logo-hero" viewBox="0 0 120 120" aria-hidden="true">
       <g id="logo-art" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
@@ -52,95 +52,143 @@
         <path class="lg-a lg-a3" pathLength="1" d="M80 62l20-20M87 42h13v13"/>
       </g>
     </svg>
-    <h1>De los sistemas de mando y control a la <em>ingeniería de IA</em></h1>
-    <p>Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Industrial. Llevo la disciplina de mando y la gestión de proyectos técnicos al desarrollo de agentes de IA, sistemas RAG y modelos de visión por computador.</p>
+    <h1 data-i18n="hero.h1">From command and control systems to <em>AI engineering</em></h1>
+    <p data-i18n="hero.p">Spanish Army Artillery Captain and Industrial Engineer. I bring command discipline and technical project management to building AI agents, RAG systems and computer vision models.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="trayectoria.html">Trayectoria</a>
+      <a class="btn btn-primary" href="#projects"><span data-i18n="hero.cta">View projects</span> <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="career.html" data-i18n="nav.career">Career</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a>
       <a class="btn btn-ghost" href="https://github.com/JTiiz">GitHub</a>
     </div>
-    <div class="badges"><span>Capitán OF-2</span><span>AI Engineering · Ironhack</span><span>Agentic AI · RAG · CNN</span><span>Badajoz · Extremadura</span></div>
+    <div class="badges"><span data-i18n="b.captain">Army Captain (OF-2)</span><span>AI Engineering · Ironhack</span><span>Agentic AI · RAG · NLP · CNN</span><span data-i18n="b.loc">Badajoz · Spain</span></div>
   </div>
 </header>
 
-<section id="proyectos">
+<section id="projects">
   <div class="inner">
     <div class="sec-head">
-      <h2>Proyectos</h2>
-      <p>Proyectos de IA desarrollados en el programa de AI Engineering de Ironhack, con el código publicado en GitHub.</p>
+      <h2 data-i18n="proj.title">Projects</h2>
+      <p data-i18n="proj.sub">AI and machine learning projects built during the Ironhack AI Engineering programme. All the code is on GitHub.</p>
     </div>
 
     <article class="project">
       <div class="copy">
-        <span class="kicker">IA generativa · RAG · Agentes · abr. 2026</span>
-        <h3>YouTube QA Chatbot (RAG)</h3>
-        <p>Agente conversacional que extrae y consulta información de vídeos de YouTube en tiempo real, con LangChain y GPT-4o-mini.</p>
+        <span class="kicker" data-i18n="p1.k">Generative AI · RAG · Agents · Apr 2026</span>
+        <h3 data-i18n="p1.h">YouTube QA Chatbot (RAG)</h3>
+        <p data-i18n="p1.p">Conversational agent that extracts and queries information from YouTube videos in real time, built with LangChain and GPT-4o-mini.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Pipeline RAG completo: ingesta automática, transcripción e indexación vectorial en ChromaDB</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Sistema agéntico con herramientas propias, memoria conversacional e interfaz Gradio</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Observabilidad con LangSmith y evaluación con RAGAS (fidelidad y relevancia de las respuestas)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.a">Full RAG pipeline: automated ingestion, transcription and vector indexing in ChromaDB</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.b">Agentic system with custom tools, conversational memory and a Gradio interface</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.c">Observability with LangSmith and evaluation with RAGAS (faithfulness and answer relevancy)</span></li>
         </ul>
-        <div class="links"><a href="https://github.com/JTiiz/yt_chatbot_final">Código fuente →</a></div>
+        <div class="links"><a href="https://github.com/JTiiz/yt_chatbot_final" data-i18n="src">Source code →</a></div>
       </div>
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>youtube-qa-chatbot · Gradio</span></div>
-        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · pregunta sobre un vídeo y respuesta del agente]</div></div>
+        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p1.v">[Video 45 s · a question about a video and the agent's answer]</span></div></div>
     </article>
 
     <article class="project flip">
       <div class="copy">
-        <span class="kicker">Visión por computador · Deep Learning · mar. 2026</span>
-        <h3>Reconocimiento de imágenes con CNN y Transfer Learning</h3>
-        <p>Motor de clasificación de imágenes construido con varias arquitecturas CNN, que alcanza un F1-Score de 0,97.</p>
+        <span class="kicker" data-i18n="p2.k">NLP · Transformers · LLM · Mar 2026</span>
+        <h3 data-i18n="p2.h">Review Intelligence Dashboard</h3>
+        <p data-i18n="p2.p">Platform that turns Amazon product reviews into market reports: sentiment analysis, product categorisation and AI-written summaries.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Comparativa entre CNN básica, CNN con Transfer Learning y ajuste de hiperparámetros con GridSearchCV</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Análisis exploratorio (EDA), ingeniería de variables y PCA para definir las capas de la arquitectura</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>PyTorch, Keras, Pandas y NumPy para el modelo; aplicación web con Flask para el despliegue</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p2.a">Sentiment classification with Transformer models (DeBERTa, RoBERTa) fine-tuned with LoRA</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p2.b">Product meta-categorisation with prioritised rules and clustering</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p2.c">Streamlit dashboard with streamed reports via LangChain and OpenAI, packaged with Docker</span></li>
         </ul>
-        <div class="links"><a href="https://github.com/JTiiz/CNN-project">Código fuente →</a></div>
+        <div class="links"><a href="https://github.com/JTiiz/amazon-reviews-class-summary" data-i18n="src">Source code →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>review-intelligence · Streamlit</span></div>
+        <div class="screen" data-video="videos/review-intelligence.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p2.v">[Video 40 s · from a review to the market report]</span></div></div>
+    </article>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker" data-i18n="p3.k">Computer vision · Deep learning · Mar 2026</span>
+        <h3 data-i18n="p3.h">Image recognition with CNN and transfer learning</h3>
+        <p data-i18n="p3.p">Image classification engine built with several CNN architectures, reaching an F1-score of 0.97.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.a">Comparison of a vanilla CNN, a CNN with transfer learning and hyperparameter tuning with GridSearchCV</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.b">Exploratory data analysis (EDA), feature engineering and PCA to design the network layers</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.c">PyTorch, Keras, Pandas and NumPy for the model; Flask web app for deployment</span></li>
+        </ul>
+        <div class="links"><a href="https://github.com/JTiiz/CNN-project" data-i18n="src">Source code →</a></div>
       </div>
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>cnn-transfer-learning · Flask</span></div>
-        <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · se sube una imagen y el modelo la clasifica]</div></div>
+        <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p3.v">[Video 30 s · an image is uploaded and the model classifies it]</span></div></div>
+    </article>
+
+    <article class="project flip">
+      <div class="copy">
+        <span class="kicker" data-i18n="p4.k">NLP · Text classification · Mar 2026</span>
+        <h3 data-i18n="p4.h">Fake news classifier</h3>
+        <p data-i18n="p4.p">Comparison of three NLP pipelines that label news articles as fake or real, trained on about 40,000 articles.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p4.a">TF-IDF + Logistic Regression, Bag of Words + Naive Bayes and TF-IDF + Random Forest</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p4.b">Exploratory analysis of class balance, text length and n-grams</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p4.c">Test accuracy between 95% and 99.9%, with 5-fold cross-validation and an external validation set</span></li>
+        </ul>
+        <div class="links"><a href="https://github.com/JTiiz/natural-processing-models" data-i18n="src">Source code →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>fake_news_comparison.ipynb</span></div>
+        <div class="screen" data-video="videos/fake-news-classifier.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p4.v">[Video 30 s · the three models compared]</span></div></div>
+    </article>
+
+    <article class="project">
+      <div class="copy">
+        <span class="kicker" data-i18n="p5.k">Machine learning · Forecasting · Mar 2026</span>
+        <h3 data-i18n="p5.h">Iron Kaggle: sales forecasting</h3>
+        <p data-i18n="p5.p">Model that predicts daily sales for hundreds of stores from customers, promotions, holidays and calendar data.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.a">Data cleaning, exploratory analysis and 20 engineered features</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.b">Comparison of linear regression, decision trees, Random Forest and Gradient Boosting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.c">R² above 0.95 on more than 100,000 test records</span></li>
+        </ul>
+        <div class="links"><a href="https://github.com/JTiiz/iron-kaggle" data-i18n="src">Source code →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
+        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p5.v">[Video 30 s · model comparison and prediction]</span></div></div>
     </article>
   </div>
 </section>
 
-<section id="como-trabajo" class="alt">
+<section id="how-i-work" class="alt">
   <div class="inner">
     <div class="sec-head">
-      <h2>Cómo trabajo</h2>
-      <p>Liderazgo militar, ingeniería y IA: un perfil pensado para llevar la tecnología a entornos exigentes.</p>
+      <h2 data-i18n="how.title">How I work</h2>
+      <p data-i18n="how.sub">Military leadership, engineering and AI: a profile built to bring technology into demanding environments.</p>
     </div>
     <div class="features">
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
-        <h3>Liderazgo probado</h3>
-        <p>Seis años al mando de unidades y equipos: sección, batería y, hoy, la sección de operaciones de un batallón de Cuartel General.</p>
+        <h3 data-i18n="f1.h">Proven leadership</h3>
+        <p data-i18n="f1.p">Six years commanding units and teams: platoon, battery and, today, the operations section of a Headquarters Battalion.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
-        <h3>Del requisito al sistema</h3>
-        <p>He definido requisitos, seguido la implantación y participado en las integraciones de un nuevo sistema de mando y control junto a ingenieros de GMV.</p>
+        <h3 data-i18n="f2.h">From requirement to system</h3>
+        <p data-i18n="f2.p">I have defined requirements, followed the rollout and taken part in the integrations of a new command and control system alongside GMV engineers.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l2.8 8M16 7.5l-2.8 8M8.5 6h7"/></svg>
-        <h3>IA agéntica y RAG</h3>
-        <p>Agentes con herramientas y memoria, bases de datos vectoriales y evaluación con métricas (RAGAS, LangSmith) para medir, no suponer.</p>
+        <h3 data-i18n="f3.h">Agentic AI and RAG</h3>
+        <p data-i18n="f3.p">Agents with tools and memory, vector databases and metric-based evaluation (RAGAS, LangSmith) to measure rather than guess.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
-        <h3>Datos y modelos</h3>
-        <p>Análisis exploratorio, ingeniería de variables y comparación de arquitecturas de deep learning con métricas claras.</p>
+        <h3 data-i18n="f4.h">Data and models</h3>
+        <p data-i18n="f4.p">Exploratory analysis, feature engineering and comparison of machine learning and deep learning models with clear metrics.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
-        <h3>Seguridad y confidencialidad</h3>
-        <p>Acostumbrado a trabajar con información clasificada. Las demos usan siempre datos ficticios.</p>
+        <h3 data-i18n="f5.h">Security and confidentiality</h3>
+        <p data-i18n="f5.p">Used to working with classified information. Demos always use fictitious data.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <h3>Mentalidad de organización industrial</h3>
-        <p>Primero entiendo el proceso; después lo automatizo para ahorrar horas de trabajo repetitivo.</p>
+        <h3 data-i18n="f6.h">Industrial engineering mindset</h3>
+        <p data-i18n="f6.p">First I understand the process; then I automate it to save hours of repetitive work.</p>
       </div>
     </div>
   </div>
@@ -150,13 +198,17 @@
   <div class="inner terminal-wrap">
     <div class="copy">
       <span class="kicker">Stack</span>
-      <h3>Herramientas con las que construyo</h3>
-      <p>Del notebook de datos al agente desplegado.</p>
-      <div class="stack-groups"><div><h4>Core</h4><div class="stack"><span>Python 3</span><span>SQL</span><span>NoSQL</span><span>Shell Script</span><span>Agentic AI</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span></div></div><div><h4>Frameworks</h4><div class="stack"><span>Flask</span><span>LangChain</span><span>LangGraph</span><span>LangSmith</span></div></div><div><h4>Infraestructura</h4><div class="stack"><span>AWS</span><span>Azure</span><span>Google Cloud</span><span>Docker</span><span>TCP/IP</span><span>Configuración de redes</span></div></div></div>
+      <h3 data-i18n="stack.h">Tools I build with</h3>
+      <p data-i18n="stack.p">From the data notebook to the deployed agent.</p>
+      <div class="stack-groups">
+        <div><h4>Core</h4><div class="stack"><span>Python 3</span><span>SQL</span><span>NoSQL</span><span>Shell Script</span><span>Agentic AI</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span></div></div>
+        <div><h4>Frameworks</h4><div class="stack"><span>Flask</span><span>LangChain</span><span>LangGraph</span><span>LangSmith</span></div></div>
+        <div><h4 data-i18n="stack.infra">Infrastructure</h4><div class="stack"><span>AWS</span><span>Azure</span><span>Google Cloud</span><span>Docker</span><span>TCP/IP</span><span data-i18n="stack.net">Network configuration</span></div></div>
+      </div>
     </div>
-    <div class="terminal" role="img" aria-label="Terminal arrancando el YouTube QA Chatbot">
+    <div class="terminal" role="img" aria-label="Terminal">
       <div class="bar"><i></i><i></i><i></i></div>
-<pre><span class="c"># clonar y arrancar el chatbot</span>
+<pre><span class="c" data-i18n="term.c"># clone and run the chatbot</span>
 <span class="p">$</span> git clone github.com/JTiiz/yt_chatbot_final
 <span class="p">$</span> pip install -r requirements.txt
 <span class="p">$</span> python appt.py
@@ -165,19 +217,19 @@
   </div>
 </section>
 
-<footer id="contacto">
+<footer id="contact">
   <div class="inner">
     <div class="cols">
-      <div><h4>Proyectos</h4><ul><li><a href="index.html#proyectos">YouTube QA Chatbot</a></li><li><a href="index.html#proyectos">CNN con Transfer Learning</a></li></ul></div>
-      <div><h4>Perfil</h4><ul><li><a href="trayectoria.html">Trayectoria</a></li><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
-      <div><h4>Contacto</h4><ul><li><a class="mail" href="mailto:jesuramirezdur@gmail.com">jesuramirezdur@gmail.com</a></li><li>Badajoz, Extremadura</li></ul></div>
+      <div><h4 data-i18n="nav.projects">Projects</h4><ul><li><a href="index.html#projects">YouTube QA Chatbot</a></li><li><a href="index.html#projects">Review Intelligence Dashboard</a></li><li><a href="index.html#projects">CNN Transfer Learning</a></li><li><a href="index.html#projects">Fake News Classifier</a></li><li><a href="index.html#projects">Iron Kaggle</a></li></ul></div>
+      <div><h4 data-i18n="foot.profile">Profile</h4><ul><li><a href="career.html" data-i18n="nav.career">Career</a></li><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
+      <div><h4 data-i18n="nav.contact">Contact</h4><ul><li><a class="mail" href="mailto:jesuramirezdur@gmail.com">jesuramirezdur@gmail.com</a></li><li data-i18n="foot.loc">Badajoz, Spain</li></ul></div>
     </div>
-    <div class="legal"><span>© 2026 Jesús Ramírez Durán</span><span>Publicado con GitHub Pages</span></div>
+    <div class="legal"><span>© 2026 Jesús Ramírez Durán</span><span data-i18n="foot.pub">Published with GitHub Pages</span></div>
   </div>
 </footer>
-
+<script src="i18n.js"></script>
 <script>
-// Si existe el vídeo en /videos, sustituye el marcador por el reproductor
+// If the video exists in /videos, replace the placeholder with the player
 document.querySelectorAll('.screen[data-video]').forEach(function(box){
   var v=document.createElement('video');
   v.src=box.dataset.video; v.muted=true; v.loop=true; v.playsInline=true; v.controls=true; v.preload='metadata';
