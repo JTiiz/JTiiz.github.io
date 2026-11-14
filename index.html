@@ -5,152 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Jesús Ramírez Durán: Capitán de Artillería e Ingeniero de Organización Industrial especializado en ingeniería de IA, agentes, RAG y LLM.">
 <meta property="og:title" content="Jesús Ramírez Durán · AI Engineering y sistemas de mando y control">
-<meta property="og:description" content="Trayectoria y proyectos de IA, datos y automatización.">
+<meta property="og:description" content="Proyectos de IA: agentes, RAG y visión por computador.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <title>Portfolio Jesús Ramírez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Estilo inspirado en electronjs.org: hero oscuro azul pizarra con acento cian, cuerpo claro, rejilla de características, bloques de terminal y secciones alternas texto/captura */
-:root{
-  --hero:#2B2E3B; --hero-2:#353949; --hero-fg:#F2F4F8; --hero-muted:#B3B9C9;
-  --bg:#FFFFFF; --bg-alt:#F5F6F9; --fg:#1C1E26; --muted:#5A6072; --line:#E2E5EC;
-  --accent:#47848F; --accent-ink:#2F6872; --cyan:#9FEAF9;
-  --term:#1E2029; --term-fg:#D7DCE6;
-  --display:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1B1D25; --bg-alt:#22252F; --fg:#E8EBF2; --muted:#A3A9B8; --line:#343846;
-  --accent:#7CC3CF; --accent-ink:#9FEAF9; --term:#13141A; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#1B1D25; --bg-alt:#22252F; --fg:#E8EBF2; --muted:#A3A9B8; --line:#343846;
-  --accent:#7CC3CF; --accent-ink:#9FEAF9; --term:#13141A; color-scheme:dark}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0}
-img,video{max-width:100%}
-.screen video{width:100%;height:100%;object-fit:cover;display:block}
-.screen.has-video{padding:0;background:#000}
-body{background:var(--bg);color:var(--fg);font-family:var(--display);font-size:16px;line-height:1.6}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hero)}
-a{color:var(--accent-ink)}
-a:focus-visible,.btn:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
-h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
-.inner{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-
-/* Navbar */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);border-bottom:1px solid #3B3F50}
-.nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-block:8px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--hero-fg);text-decoration:none;font-weight:700}
-.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-.nav ul a{color:var(--hero-muted);text-decoration:none;font-size:15px;font-weight:500}
-.nav ul a:hover{color:var(--hero-fg)}
-
-/* Hero */
-.hero{background:var(--hero);color:var(--hero-fg);text-align:center;overflow:hidden;position:relative}
-.hero .inner{padding-block:72px 88px;display:flex;flex-direction:column;align-items:center;gap:22px;position:relative}
-.logo{color:#4A9BE0;flex:none}
-.logo-hero{width:156px;height:156px}
-/*logo-anim*/
-.lg-s,.lg-a{stroke-dasharray:1;stroke-dashoffset:0}
-.lg-n,.lg-dot{transform-box:fill-box;transform-origin:center}
-.lg-s{animation:lg-draw 5s ease-out infinite both}
-.lg-n{animation:lg-pop 5s ease-out infinite both}
-.lg-a{animation:lg-shoot 5s cubic-bezier(.3,.7,.2,1) infinite both}
-.lg-a2{animation-delay:.18s}.lg-a3{animation-delay:.36s}
-.lg-dot{animation:lg-pulse 1.25s ease-in-out infinite}
-@keyframes lg-draw{0%{stroke-dashoffset:1;opacity:0}3%{opacity:1}20%{stroke-dashoffset:0}88%{opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}
-@keyframes lg-pop{0%,18%{transform:scale(0);opacity:0}26%{transform:scale(1.25);opacity:1}31%{transform:scale(1)}88%{transform:scale(1);opacity:1}95%,100%{transform:scale(1);opacity:0}}
-@keyframes lg-shoot{0%,30%{stroke-dashoffset:1;opacity:0}32%{opacity:1}52%{stroke-dashoffset:0}84%{opacity:1}92%,100%{stroke-dashoffset:0;opacity:0}}
-@keyframes lg-pulse{0%,100%{transform:scale(.7)}50%{transform:scale(1.25)}}
-@media (prefers-reduced-motion:reduce){.lg-s,.lg-n,.lg-a,.lg-dot{animation:none}}
-/*end-logo-anim*/
-.hero h1{font-size:clamp(32px,5.4vw,54px);font-weight:800;letter-spacing:-.02em;max-width:900px}
-.hero h1 em{font-style:normal;color:var(--cyan)}
-.hero p{margin:0;color:var(--hero-muted);font-size:clamp(17px,2vw,20px);max-width:640px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--cyan);color:#1C1E26}
-.btn-ghost{color:var(--hero-fg);border:1px solid #5A6072}
-.btn-ghost:hover{background:var(--hero-2)}
-.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;font-family:var(--mono);font-size:13px;color:var(--hero-muted)}
-.badges span{border:1px solid #454A5C;border-radius:999px;padding:3px 12px}
-
-/* Features */
-section{padding-block:80px}
-.alt{background:var(--bg-alt)}
-.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;max-width:680px}
-.sec-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-.01em}
-.sec-head p{margin:0;color:var(--muted)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 40px}
-.feat{display:flex;flex-direction:column;gap:8px;min-width:0}
-.feat svg{width:30px;height:30px;color:var(--accent)}
-.feat h3{font-size:18px;font-weight:700}
-.feat p{margin:0;color:var(--muted);font-size:15px}
-
-/* Projects */
-.project{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center;padding-block:56px;border-top:1px solid var(--line)}
-.project:first-of-type{border-top:0;padding-top:0}
-.project.flip .shot{order:-1}
-@media (max-width:900px){.project.flip .shot{order:0}}
-.copy{display:flex;flex-direction:column;gap:14px;min-width:0}
-.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
-.copy h3{font-size:clamp(24px,2.8vw,30px);font-weight:700;letter-spacing:-.01em}
-.copy p{margin:0;color:var(--muted)}
-.copy ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
-.copy li{display:flex;gap:10px;font-size:15px}
-.copy li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--accent)}
-.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
-.links a{text-decoration:none}.links a:hover{text-decoration:underline}
-
-/* Trayectoria */
-.cv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px 56px;align-items:start}
-.cv h3{font-size:14px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent-ink);font-weight:500;margin-bottom:20px}
-.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.tl li{position:relative;padding:0 0 28px 24px}
-.tl li:last-child{padding-bottom:0}
-.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-.tl li.now::before{background:var(--accent)}
-.tl h4{margin:0;font-size:17px;font-weight:700;line-height:1.3}
-.tl .org{font-weight:500}
-.tl .when{display:block;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:2px 0 6px}
-.tl p{margin:0;color:var(--muted);font-size:15px}
-
-/* App window holding the video */
-.shot{background:var(--hero);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(20,22,30,.45);max-width:100%;min-width:0}
-.shot .bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--hero-2)}
-.shot .bar i{width:11px;height:11px;border-radius:50%;background:#5A6072}
-.shot .bar span{margin-left:10px;font-family:var(--mono);font-size:12px;color:var(--hero-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.screen{aspect-ratio:16/9;max-width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--hero-muted);font-size:14px;text-align:center;padding:16px;
-  background:radial-gradient(circle at 50% 40%,#3A3F52 0,#2B2E3B 70%)}
-.play{width:62px;height:62px;border-radius:50%;border:2px solid var(--cyan);display:grid;place-items:center}
-.play svg{width:22px;height:22px;margin-left:4px;fill:var(--cyan)}
-
-/* Terminal */
-.terminal-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center}
-.terminal{background:var(--term);color:var(--term-fg);border-radius:12px;font-family:var(--mono);font-size:14px;line-height:1.8;overflow-x:auto;min-width:0}
-.terminal .bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid #2C2F3B}
-.terminal .bar i{width:11px;height:11px;border-radius:50%;background:#454A5C}
-.terminal pre{margin:0;padding:18px 20px}
-.terminal .p{color:#7CC3CF}.terminal .c{color:#7F8597}.terminal .ok{color:#A8E6A1}
-
-/* Stack */
-.stack{display:flex;flex-wrap:wrap;gap:10px}
-.stack span{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:8px 14px;font-size:14px;font-weight:500}
-
-/* Footer */
-footer{background:var(--hero);color:var(--hero-muted);font-size:14px}
-footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36px}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px}
-.cols h4{margin:0 0 10px;color:var(--hero-fg);font-size:14px;text-transform:uppercase;letter-spacing:.06em}
-.cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.cols a{color:var(--hero-muted);text-decoration:none}.cols a:hover{color:var(--cyan)}
-.legal{border-top:1px solid #3B3F50;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.mail{font-family:var(--mono);color:var(--hero-fg);user-select:all}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -161,10 +21,10 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
       Jesús Ramírez
     </a>
     <ul>
-      <li><a href="#trayectoria">Trayectoria</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
       <li><a href="#stack">Stack</a></li>
+      <li><a href="trayectoria.html">Trayectoria</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
@@ -193,146 +53,54 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
       </g>
     </svg>
     <h1>De los sistemas de mando y control a la <em>ingeniería de IA</em></h1>
-    <p>Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Industrial. Llevo la disciplina de mando y la gestión de proyectos técnicos al desarrollo de agentes de IA, sistemas RAG y aplicaciones con LLM.</p>
+    <p>Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Industrial. Llevo la disciplina de mando y la gestión de proyectos técnicos al desarrollo de agentes de IA, sistemas RAG y modelos de visión por computador.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="#trayectoria">Trayectoria</a>
+      <a class="btn btn-ghost" href="trayectoria.html">Trayectoria</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a>
       <a class="btn btn-ghost" href="https://github.com/JTiiz">GitHub</a>
     </div>
-    <div class="badges"><span>Capitán OF-2</span><span>AI Engineering · Ironhack</span><span>NLP · RAG · LLM</span><span>Badajoz · Extremadura</span></div>
+    <div class="badges"><span>Capitán OF-2</span><span>AI Engineering · Ironhack</span><span>Agentic AI · RAG · CNN</span><span>Badajoz · Extremadura</span></div>
   </div>
 </header>
-
-<section id="trayectoria" class="alt">
-  <div class="inner">
-    <div class="sec-head">
-      <h2>Trayectoria</h2>
-      <p>Oficial del Ejército de Tierra con experiencia en sistemas de mando y control, ahora centrado en la ingeniería de IA.</p>
-    </div>
-    <div class="cv">
-      <div>
-        <h3>Experiencia</h3>
-        <ul class="tl">
-          <li class="now"><h4>Jefe de la Sección de Operaciones · <span class="org">Ejército de Tierra</span></h4><span class="when">abr. 2026 – actualidad · Badajoz</span><p>Batallón de Cuartel General de la Brigada «Extremadura» XI. Coordinación de alto nivel entre áreas y unidades, incluidas inteligencia y escuadras de drones.</p></li>
-          <li><h4>Technical Officer · <span class="org">GMV</span></h4><span class="when">jun. 2025 – dic. 2025 · San Fernando</span><p>Dirigí el proyecto de un nuevo sistema de mando y control de artillería de costa con ingenieros de GMV: requisitos del Ejército, seguimiento de la implantación e integraciones.</p></li>
-          <li><h4>Profesor asociado · <span class="org">Universidad de Zaragoza</span></h4><span class="when">sept. 2025 – oct. 2025 · San Fernando</span><p>Tutor de un Trabajo Fin de Grado sobre la remodelación de sistemas de mando y control de costa.</p></li>
-          <li><h4>Jefe de Batería · <span class="org">Ejército de Tierra</span></h4><span class="when">jun. 2025 – nov. 2025</span><p>Batería de Mando y Control de Artillería de Costa.</p></li>
-          <li><h4>Jefe de Sección · <span class="org">Ejército de Tierra</span></h4><span class="when">sept. 2021 – ene. 2026</span><p>Sección de Artillería de Costa. Técnicas de guerra electrónica y unidades de artillería de costa y de campaña.</p></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Formación</h3>
-        <ul class="tl">
-          <li class="now"><h4>AI Engineering · <span class="org">Ironhack</span></h4><span class="when">feb. 2026 – may. 2026 · certificado abr. 2026</span><p>Más de 400 horas de Python, machine learning, NLP, LLM, RAG, bases de datos vectoriales y despliegue de IA.</p></li>
-          <li><h4>Grado en Ingeniería de Organización Industrial · <span class="org">Universidad de Zaragoza</span></h4><span class="when">2016 – 2021</span><p>Gestión de procesos, producción, organización y métodos cuantitativos.</p></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="proyectos">
   <div class="inner">
     <div class="sec-head">
       <h2>Proyectos</h2>
-      <p>Proyectos de IA del programa de AI Engineering y herramientas de automatización para problemas reales de gestión. Las demos duran menos de un minuto.</p>
+      <p>Proyectos de IA desarrollados en el programa de AI Engineering de Ironhack, con el código publicado en GitHub.</p>
     </div>
 
     <article class="project">
       <div class="copy">
-        <span class="kicker">IA generativa · RAG · Agentes</span>
-        <h3>YouTube QA Chatbot</h3>
-        <p>Chatbot que responde preguntas sobre el contenido de vídeos de YouTube a partir de sus transcripciones, citando el minuto exacto.</p>
+        <span class="kicker">IA generativa · RAG · Agentes · abr. 2026</span>
+        <h3>YouTube QA Chatbot (RAG)</h3>
+        <p>Agente conversacional que extrae y consulta información de vídeos de YouTube en tiempo real, con LangChain y GPT-4o-mini.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>RAG con LangChain, ChromaDB y GPT-4o-mini</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Agente con 4 herramientas: buscar, listar, localizar y resumir vídeos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Transcripción con Whisper, interfaz Gradio y evaluación con RAGAS y LangSmith</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Pipeline RAG completo: ingesta automática, transcripción e indexación vectorial en ChromaDB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Sistema agéntico con herramientas propias, memoria conversacional e interfaz Gradio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Observabilidad con LangSmith y evaluación con RAGAS (fidelidad y relevancia de las respuestas)</li>
         </ul>
         <div class="links"><a href="https://github.com/JTiiz/yt_chatbot_final">Código fuente →</a></div>
       </div>
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>youtube-qa-chatbot · Gradio</span></div>
-        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · pregunta sobre un vídeo y respuesta con enlace al minuto]</div></div>
+        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · pregunta sobre un vídeo y respuesta del agente]</div></div>
     </article>
 
     <article class="project flip">
       <div class="copy">
-        <span class="kicker">Machine Learning · Predicción</span>
-        <h3>Iron Kaggle: predicción de ventas</h3>
-        <p>Modelo que predice las ventas diarias de cientos de tiendas a partir de clientes, promociones, festivos y calendario.</p>
+        <span class="kicker">Visión por computador · Deep Learning · mar. 2026</span>
+        <h3>Reconocimiento de imágenes con CNN y Transfer Learning</h3>
+        <p>Motor de clasificación de imágenes construido con varias arquitecturas CNN, que alcanza un F1-Score de 0,97.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Limpieza, análisis exploratorio y 20 variables nuevas</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Comparativa de regresión lineal, árboles, Random Forest y Gradient Boosting</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>R² superior a 0,95 sobre más de 100 000 registros de prueba</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Comparativa entre CNN básica, CNN con Transfer Learning y ajuste de hiperparámetros con GridSearchCV</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Análisis exploratorio (EDA), ingeniería de variables y PCA para definir las capas de la arquitectura</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>PyTorch, Keras, Pandas y NumPy para el modelo; aplicación web con Flask para el despliegue</li>
         </ul>
-        <div class="links"><a href="https://github.com/JTiiz/iron-kaggle">Código fuente →</a></div>
+        <div class="links"><a href="https://github.com/JTiiz/CNN-project">Código fuente →</a></div>
       </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
-        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · comparativa de modelos y predicción]</div></div>
-    </article>
-
-    <article class="project">
-      <div class="copy">
-        <span class="kicker">Agente IA · Tarea programada</span>
-        <h3>Buscador automático de convocatorias</h3>
-        <p>Revisa cada mañana las convocatorias públicas abiertas y filtra por zona, tipo de plaza y nivel.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Ayuntamientos, comunidad autónoma y Estado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Filtro por distancia y perfil profesional</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Resumen diario directo al móvil</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>resumen diario · 08:00</span></div>
-        <div class="screen" data-video="videos/buscador-convocatorias.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · aviso de convocatorias en el móvil]</div></div>
-    </article>
-
-    <article class="project flip">
-      <div class="copy">
-        <span class="kicker">Web app · Algoritmos</span>
-        <h3>Route Detour Optimizer</h3>
-        <p>Calcula el desvío mínimo para añadir paradas a una ruta, con un algoritmo basado en Dijkstra sobre Google Maps.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Next.js 14, TypeScript y Tailwind</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Supabase y despliegue en Vercel</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integración continua y guía de instalación</li>
-        </ul>
-        <div class="links"><a href="#">Probar demo →</a><a href="#">Código fuente →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>route-detour-optimizer.vercel.app</span></div>
-        <div class="screen" data-video="videos/route-detour-optimizer.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 45 s · el mapa calcula el desvío]</div></div>
-    </article>
-
-    <article class="project">
-      <div class="copy">
-        <span class="kicker">Excel · VBA · Automatización</span>
-        <h3>Control de comisiones de servicio</h3>
-        <p>Seguimiento de asignaciones, estados, personal y solicitudes de anticipo en un solo libro.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Panel con indicadores calculados automáticamente</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Alertas por urgencia y próximas salidas por fecha</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Registro validado y sincronizado con macros</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Control_Comisiones.xlsm</span></div>
-        <div class="screen" data-video="videos/control-comisiones.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 40 s · alta de registro y panel actualizado]</div></div>
-    </article>
-
-    <article class="project flip">
-      <div class="copy">
-        <span class="kicker">PDF · Consolidación</span>
-        <h3>Consolidador de programación semanal</h3>
-        <p>Une los programas semanales de cinco departamentos en un único documento, conservando el formato y ajustando solo las fechas.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Entrada: varios PDF con formatos distintos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Salida: un programa listo para difundir</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>De trabajo manual semanal a minutos</li>
-        </ul>
-        <div class="links"><a href="#">Ver demo →</a></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>programa_semanal.pdf</span></div>
-        <div class="screen" data-video="videos/programacion-semanal.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · entran 5 PDF, sale 1]</div></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>cnn-transfer-learning · Flask</span></div>
+        <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div>[Vídeo 30 s · se sube una imagen y el modelo la clasifica]</div></div>
     </article>
   </div>
 </section>
@@ -362,7 +130,7 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
         <h3>Datos y modelos</h3>
-        <p>Limpieza, ingeniería de variables y comparación de modelos de machine learning con métricas claras.</p>
+        <p>Análisis exploratorio, ingeniería de variables y comparación de arquitecturas de deep learning con métricas claras.</p>
       </div>
       <div class="feat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
@@ -383,8 +151,8 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
     <div class="copy">
       <span class="kicker">Stack</span>
       <h3>Herramientas con las que construyo</h3>
-      <p>Del notebook de datos al agente desplegado, y del libro de Excel a la aplicación web, según lo que pida cada problema.</p>
-      <div class="stack"><span>Python</span><span>LangChain</span><span>OpenAI API</span><span>ChromaDB</span><span>RAGAS</span><span>LangSmith</span><span>Whisper</span><span>Gradio</span><span>pandas</span><span>scikit-learn</span><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Excel / VBA</span><span>GitHub Actions</span></div>
+      <p>Del notebook de datos al agente desplegado.</p>
+      <div class="stack-groups"><div><h4>Core</h4><div class="stack"><span>Python 3</span><span>SQL</span><span>NoSQL</span><span>Shell Script</span><span>Agentic AI</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span></div></div><div><h4>Frameworks</h4><div class="stack"><span>Flask</span><span>LangChain</span><span>LangGraph</span><span>LangSmith</span></div></div><div><h4>Infraestructura</h4><div class="stack"><span>AWS</span><span>Azure</span><span>Google Cloud</span><span>Docker</span><span>TCP/IP</span><span>Configuración de redes</span></div></div></div>
     </div>
     <div class="terminal" role="img" aria-label="Terminal arrancando el YouTube QA Chatbot">
       <div class="bar"><i></i><i></i><i></i></div>
@@ -400,8 +168,8 @@ footer .inner{padding-block:56px 32px;display:flex;flex-direction:column;gap:36p
 <footer id="contacto">
   <div class="inner">
     <div class="cols">
-      <div><h4>Proyectos</h4><ul><li><a href="#proyectos">YouTube QA Chatbot</a></li><li><a href="#proyectos">Iron Kaggle</a></li><li><a href="#proyectos">Buscador de convocatorias</a></li><li><a href="#proyectos">Route Detour Optimizer</a></li><li><a href="#proyectos">Control de comisiones</a></li><li><a href="#proyectos">Programación semanal</a></li></ul></div>
-      <div><h4>Perfil</h4><ul><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
+      <div><h4>Proyectos</h4><ul><li><a href="index.html#proyectos">YouTube QA Chatbot</a></li><li><a href="index.html#proyectos">CNN con Transfer Learning</a></li></ul></div>
+      <div><h4>Perfil</h4><ul><li><a href="trayectoria.html">Trayectoria</a></li><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a class="mail" href="mailto:jesuramirezdur@gmail.com">jesuramirezdur@gmail.com</a></li><li>Badajoz, Extremadura</li></ul></div>
     </div>
     <div class="legal"><span>© 2026 Jesús Ramírez Durán</span><span>Publicado con GitHub Pages</span></div>

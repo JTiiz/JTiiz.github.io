@@ -5,13 +5,11 @@ Capitán de Artillería del Ejército de Tierra e Ingeniero de Organización Ind
 **Web:** https://jtiiz.github.io
 
 ## Proyectos
-- YouTube QA Chatbot: RAG sobre transcripciones de YouTube (LangChain, ChromaDB, Gradio)
-- Iron Kaggle: predicción de ventas con machine learning (pandas, scikit-learn)
-- Buscador automático de convocatorias: agente diario con filtros por zona y perfil
-- Route Detour Optimizer: desvío mínimo de rutas con Dijkstra (Next.js, Supabase, Vercel)
-- Control de comisiones de servicio: Excel + VBA con panel y alertas
-- Consolidador de programación semanal: unión de varios PDF en uno
+- YouTube QA Chatbot (RAG): agente sobre vídeos de YouTube (LangChain, ChromaDB, Gradio, LangSmith, RAGAS)
+- Reconocimiento de imágenes con CNN y Transfer Learning (PyTorch, Keras, Flask)
 
 ## Estructura
-- `index.html`: la web completa (HTML + CSS, sin dependencias)
+- `index.html`: página principal con los proyectos, la forma de trabajo y el stack
+- `trayectoria.html`: experiencia, formación y reconocimientos
+- `style.css`: estilos compartidos por las dos páginas
 - `videos/`: demos en MP4 (ver `videos/LEEME.txt`)
