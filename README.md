@@ -5,7 +5,7 @@
 
 ## Projects
 - [YouTube QA Chatbot (RAG)](https://github.com/JTiiz/yt_chatbot_final): agent over YouTube videos (LangChain, ChromaDB, Gradio, LangSmith, RAGAS)
-- [Review Intelligence Dashboard](https://github.com/JTiiz/amazon-reviews-class-summary): sentiment, categorisation and AI summaries of Amazon reviews (Transformers, LoRA, Streamlit)
+- [Review Intelligence Dashboard](https://github.com/JTiiz/project-amazon-review-classifier-nlp-ai): sentiment and product-category classification of Amazon reviews with fine-tuned RoBERTa models, plus AI market reports ([models on Hugging Face](https://huggingface.co/jramduran); Transformers, LoRA, Streamlit, Docker)
 - [Image recognition with CNN and transfer learning](https://github.com/JTiiz/CNN-project) (PyTorch, Keras, Flask)
 - [Fake news classifier](https://github.com/JTiiz/natural-processing-models): comparison of three NLP pipelines (scikit-learn)
 - [Iron Kaggle](https://github.com/JTiiz/iron-kaggle): sales forecasting with machine learning (pandas, scikit-learn)
