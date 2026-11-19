@@ -75,7 +75,7 @@
     <div class="cards" id="cards">
       <button class="card" type="button" id="card-p1" data-target="proj-p1" data-color="#2F6BFF" style="--c:#2F6BFF;--c2:#0A1A52"><span class="fill"></span><span class="label">— RAG · Agents</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p1.cap">Ask a YouTube video anything.</span><span class="big">YouTube QA.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p2" data-target="proj-p2" data-color="#F0452A" style="--c:#F0452A;--c2:#4A0D08"><span class="fill"></span><span class="label">— NLP · LLM</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p2.cap">Reviews in, market report out.</span><span class="big">Review Intel.</span><span class="dots"><i></i><i></i><i></i></span></button>
-      <button class="card" type="button" id="card-p3" data-target="proj-p3" data-color="#8B3DF0" style="--c:#8B3DF0;--c2:#250A52"><span class="fill"></span><span class="label">— CNN · Vision</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p3.cap">Image classification with an F1-score of 0.97.</span><span class="big">CNN Vision.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p3" data-target="proj-p3" data-color="#8B3DF0" style="--c:#8B3DF0;--c2:#250A52"><span class="fill"></span><span class="label">— CNN · Vision</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p3.cap">Animal photo classifier with 99.2% test accuracy.</span><span class="big">CNN Vision.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p4" data-target="proj-p4" data-color="#12A594" style="--c:#12A594;--c2:#06342F"><span class="fill"></span><span class="label">— NLP · TF-IDF</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p4.cap">Fake or real, with up to 99.9% accuracy.</span><span class="big">Fake News.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts with R² above 0.95.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
     </div>
@@ -117,16 +117,16 @@
       <div class="copy">
         <span class="kicker" data-i18n="p3.k">Computer vision · Deep learning · Mar 2026</span>
         <h3 data-i18n="p3.h">Image recognition with CNN and transfer learning</h3>
-        <p data-i18n="p3.p">Image classification engine built with several CNN architectures, reaching an F1-score of 0.97.</p>
+        <p data-i18n="p3.p">Web app that recognises 10 animals in a photo and compares four models trained on the same 26,000 images, reaching 99.2% accuracy on a held-out test set.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.a">Comparison of a vanilla CNN, a CNN with transfer learning and hyperparameter tuning with GridSearchCV</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.b">Exploratory data analysis (EDA), feature engineering and PCA to design the network layers</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.c">PyTorch, Keras, Pandas and NumPy for the model; Flask web app for deployment</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.a">A CNN built from scratch (88.5%) against transfer learning with EfficientNetV2-S, ConvNeXt-Tiny and a Vision Transformer (98.3–99.2%)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.b">Reproducible training on one shared stratified split, with per-class metrics and a confusion matrix for every model</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p3.c">Keras 3 on PyTorch and Hugging Face Transformers; Flask app packaged with Docker, models published on Hugging Face</span></li>
         </ul>
-        <div class="links"><a href="https://github.com/JTiiz/CNN-project" data-i18n="src">Source code →</a></div>
+        <div class="links"><a href="https://github.com/JTiiz/CNN-project" data-i18n="src">Source code →</a><a href="https://huggingface.co/models?search=jramduran/animals10" data-i18n="p3.hf">Models on Hugging Face →</a></div>
       </div>
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>cnn-transfer-learning · Flask</span></div>
-        <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p3.v">[Video 30 s · an image is uploaded and the model classifies it]</span></div></div>
+        <div class="screen" data-video="videos/cnn-transfer-learning.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p3.v">[Video 25 s · a photo is uploaded and the four models classify it]</span></div></div>
     </article>
 
     <article class="project flip" id="proj-p4">

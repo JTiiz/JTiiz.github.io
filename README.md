@@ -6,7 +6,7 @@
 ## Projects
 - [YouTube QA Chatbot (RAG)](https://github.com/JTiiz/yt_chatbot_final): ask any YouTube video a question and get the answer with a link to the exact minute; captions or Whisper ingestion, RAGAS-evaluated retrieval (LangChain, ChromaDB, Gradio, Docker)
 - [Review Intelligence Dashboard](https://github.com/JTiiz/project-amazon-review-classifier-nlp-ai): sentiment and product-category classification of Amazon reviews with fine-tuned RoBERTa models, plus AI market reports ([models on Hugging Face](https://huggingface.co/jramduran); Transformers, LoRA, Streamlit, Docker)
-- [Image recognition with CNN and transfer learning](https://github.com/JTiiz/CNN-project) (PyTorch, Keras, Flask)
+- [Image recognition with CNN and transfer learning](https://github.com/JTiiz/CNN-project): recognises 10 animals in a photo and compares a CNN built from scratch with EfficientNetV2-S, ConvNeXt-Tiny and a Vision Transformer on the same test set, up to 99.2% accuracy ([models on Hugging Face](https://huggingface.co/models?search=jramduran/animals10); Keras 3 on PyTorch, Transformers, Flask, Docker)
 - [Fake news classifier](https://github.com/JTiiz/natural-processing-models): comparison of three NLP pipelines (scikit-learn)
 - [Iron Kaggle](https://github.com/JTiiz/iron-kaggle): sales forecasting with machine learning (pandas, scikit-learn)
 
