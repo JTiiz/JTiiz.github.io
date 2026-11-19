@@ -85,16 +85,16 @@
       <div class="copy">
         <span class="kicker" data-i18n="p1.k">Generative AI · RAG · Agents · Apr 2026</span>
         <h3 data-i18n="p1.h">YouTube QA Chatbot (RAG)</h3>
-        <p data-i18n="p1.p">Conversational agent that extracts and queries information from YouTube videos in real time, built with LangChain and GPT-4o-mini.</p>
+        <p data-i18n="p1.p">Paste a YouTube link and ask the video anything, in any language: a LangChain agent with GPT-4o-mini answers from the transcript and links to the exact minute.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.a">Full RAG pipeline: automated ingestion, transcription and vector indexing in ChromaDB</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.b">Agentic system with custom tools, conversational memory and a Gradio interface</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.c">Observability with LangSmith and evaluation with RAGAS (faithfulness and answer relevancy)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.a">Ingestion from YouTube captions with a local Whisper fallback; timestamped chunks indexed in ChromaDB</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.b">Tool-calling agent with per-session memory that answers in the question's language, voice questions and a Gradio interface</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p1.c">Reproducible RAGAS evaluation: context recall from 0.79 to 1.00 after redesigning chunking and retrieval; packaged with Docker</span></li>
         </ul>
         <div class="links"><a href="https://github.com/JTiiz/yt_chatbot_final" data-i18n="src">Source code →</a></div>
       </div>
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>youtube-qa-chatbot · Gradio</span></div>
-        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p1.v">[Video 45 s · a question about a video and the agent's answer]</span></div></div>
+        <div class="screen" data-video="videos/youtube-qa-chatbot.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p1.v">[Video 28 s · a video is indexed and the agent answers with the exact minute]</span></div></div>
     </article>
 
     <article class="project flip" id="proj-p2">

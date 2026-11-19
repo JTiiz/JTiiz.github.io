@@ -4,7 +4,7 @@
 **Website:** https://jtiiz.github.io
 
 ## Projects
-- [YouTube QA Chatbot (RAG)](https://github.com/JTiiz/yt_chatbot_final): agent over YouTube videos (LangChain, ChromaDB, Gradio, LangSmith, RAGAS)
+- [YouTube QA Chatbot (RAG)](https://github.com/JTiiz/yt_chatbot_final): ask any YouTube video a question and get the answer with a link to the exact minute; captions or Whisper ingestion, RAGAS-evaluated retrieval (LangChain, ChromaDB, Gradio, Docker)
 - [Review Intelligence Dashboard](https://github.com/JTiiz/project-amazon-review-classifier-nlp-ai): sentiment and product-category classification of Amazon reviews with fine-tuned RoBERTa models, plus AI market reports ([models on Hugging Face](https://huggingface.co/jramduran); Transformers, LoRA, Streamlit, Docker)
 - [Image recognition with CNN and transfer learning](https://github.com/JTiiz/CNN-project) (PyTorch, Keras, Flask)
 - [Fake news classifier](https://github.com/JTiiz/natural-processing-models): comparison of three NLP pipelines (scikit-learn)
