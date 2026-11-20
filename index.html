@@ -77,7 +77,7 @@
       <button class="card" type="button" id="card-p2" data-target="proj-p2" data-color="#F0452A" style="--c:#F0452A;--c2:#4A0D08"><span class="fill"></span><span class="label">— NLP · LLM</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p2.cap">Reviews in, market report out.</span><span class="big">Review Intel.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p3" data-target="proj-p3" data-color="#8B3DF0" style="--c:#8B3DF0;--c2:#250A52"><span class="fill"></span><span class="label">— CNN · Vision</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p3.cap">Animal photo classifier with 99.2% test accuracy.</span><span class="big">CNN Vision.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p4" data-target="proj-p4" data-color="#12A594" style="--c:#12A594;--c2:#06342F"><span class="fill"></span><span class="label">— NLP · TF-IDF</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p4.cap">Fake or real, with up to 99.9% accuracy.</span><span class="big">Fake News.</span><span class="dots"><i></i><i></i><i></i></span></button>
-      <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts with R² above 0.95.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts for 1,115 stores, R² 0.92 on unseen weeks.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
     </div>
     <div class="details" id="details">
 
@@ -149,16 +149,16 @@
       <div class="copy">
         <span class="kicker" data-i18n="p5.k">Machine learning · Forecasting · Mar 2026</span>
         <h3 data-i18n="p5.h">Iron Kaggle: sales forecasting</h3>
-        <p data-i18n="p5.p">Model that predicts daily sales for hundreds of stores from customers, promotions, holidays and calendar data.</p>
+        <p data-i18n="p5.p">Web app that forecasts the daily sales of 1,115 Rossmann stores from what is known in advance (store, date, promotions and holidays) and compares four models against the real sales of the last 6 weeks.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.a">Data cleaning, exploratory analysis and 20 engineered features</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.b">Comparison of linear regression, decision trees, Random Forest and Gradient Boosting</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.c">R² above 0.95 on more than 100,000 test records</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.a">Linear regression, decision tree, random forest and gradient boosting on a time-based split; gradient boosting reaches R² 0.921 and a 0.8% error on the 6-week total</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.b">Leakage-free features: per-store statistics from the training period only, plus a separate comparison with the original challenge setup, which used same-day customers (R² 0.978)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p5.c">scikit-learn and pandas; Streamlit and Plotly app packaged with Docker, models published on Hugging Face</span></li>
         </ul>
-        <div class="links"><a href="https://github.com/JTiiz/iron-kaggle" data-i18n="src">Source code →</a></div>
+        <div class="links"><a href="https://github.com/JTiiz/iron-kaggle" data-i18n="src">Source code →</a><a href="https://huggingface.co/models?search=jramduran/rossmann-sales" data-i18n="p5.hf">Models on Hugging Face →</a></div>
       </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>iron_kaggle.ipynb</span></div>
-        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p5.v">[Video 30 s · model comparison and prediction]</span></div></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>store-sales-forecast · Streamlit</span></div>
+        <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p5.v">[Video 20 s · four models against real sales, then a one-day forecast]</span></div></div>
     </article>
     </div>
   </div>
