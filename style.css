@@ -120,12 +120,6 @@ section{padding-block:80px}
 .play svg{width:22px;height:22px;margin-left:4px;fill:var(--cyan)}
 
 /* Terminal */
-.terminal-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center}
-.terminal{background:var(--term);color:var(--term-fg);border-radius:12px;font-family:var(--mono);font-size:14px;line-height:1.8;overflow-x:auto;min-width:0}
-.terminal .bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid #2C2F3B}
-.terminal .bar i{width:11px;height:11px;border-radius:50%;background:#454A5C}
-.terminal pre{margin:0;padding:18px 20px}
-.terminal .p{color:#7CC3CF}.terminal .c{color:#7F8597}.terminal .ok{color:#A8E6A1}
 
 /* Stack */
 .stack{display:flex;flex-wrap:wrap;gap:10px}
