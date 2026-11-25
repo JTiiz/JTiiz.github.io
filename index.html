@@ -69,7 +69,7 @@
   <div class="inner">
     <div class="sec-head">
       <h2 data-i18n="proj.title">Projects</h2>
-      <p data-i18n="proj.sub">AI and machine learning projects built during the Ironhack AI Engineering programme. All the code is on GitHub.</p>
+      <p data-i18n="proj.sub">AI, machine learning and software projects, most of them built during the Ironhack AI Engineering programme. All the code is on GitHub.</p>
       <p class="hint" data-i18n="proj.hint">Click or tap a card to open the project and its video. All the projects are listed below.</p>
     </div>
     <div class="cards" id="cards">
@@ -78,6 +78,7 @@
       <button class="card" type="button" id="card-p3" data-target="proj-p3" data-color="#8B3DF0" style="--c:#8B3DF0;--c2:#250A52"><span class="fill"></span><span class="label">— CNN · Vision</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p3.cap">Animal photo classifier with 99.2% test accuracy.</span><span class="big">CNN Vision.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p4" data-target="proj-p4" data-color="#12A594" style="--c:#12A594;--c2:#06342F"><span class="fill"></span><span class="label">— NLP · TF-IDF</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p4.cap">Fake or real: 95.6% on unseen articles, once the leaks are removed.</span><span class="big">Fake News.</span><span class="dots"><i></i><i></i><i></i></span></button>
       <button class="card" type="button" id="card-p5" data-target="proj-p5" data-color="#E0A21A" style="--c:#E0A21A;--c2:#4A3206"><span class="fill"></span><span class="label">— ML · Forecast</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p5.cap">Daily sales forecasts for 1,115 stores, R² 0.92 on unseen weeks.</span><span class="big">Iron Kaggle.</span><span class="dots"><i></i><i></i><i></i></span></button>
+      <button class="card" type="button" id="card-p6" data-target="proj-p6" data-color="#E0407B" style="--c:#E0407B;--c2:#4A0A26"><span class="fill"></span><span class="label">— Graphs · Maps</span><canvas aria-hidden="true"></canvas><span class="cap" data-i18n="p6.cap">The road-trip stop that costs you the least time.</span><span class="big">Route Detour.</span><span class="dots"><i></i><i></i><i></i></span></button>
     </div>
     <div class="details" id="details">
 
@@ -160,6 +161,22 @@
       <div class="shot"><div class="bar"><i></i><i></i><i></i><span>store-sales-forecast · Streamlit</span></div>
         <div class="screen" data-video="videos/iron-kaggle.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p5.v">[Video 20 s · four models against real sales, then a one-day forecast]</span></div></div>
     </article>
+
+    <article class="project flip" id="proj-p6">
+      <div class="copy">
+        <span class="kicker" data-i18n="p6.k">Algorithms · Maps · PWA · Nov 2026</span>
+        <h3 data-i18n="p6.h">Route Detour Optimizer</h3>
+        <p data-i18n="p6.p">Web app that finds where to stop on a road trip: pick up to four needs (fuel, EV charging, gluten-free food, a playground...) and it finds the stop, or combination of stops, that adds the least driving.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p6.a">Dijkstra over (place, needs already covered) states, run in the browser and checked against brute force on 200 random graphs; within 0.2 to 1.1 minutes of the full route on the example trips</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p6.b">Catalogue of 201,190 places in Spain from OpenStreetMap and OSRM driving times; if nothing fits at the chosen time, it offers the closest moments of the trip that do</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="p6.c">TypeScript, React, Vite and MapLibre; installable on phones, opens the trip in Google Maps, Apple Maps or Waze, with no API keys or backend of its own</span></li>
+        </ul>
+        <div class="links"><a href="https://jtiiz.github.io/route-detour-optimizer/" data-i18n="p6.try">Try the app →</a><a href="https://github.com/JTiiz/route-detour-optimizer" data-i18n="src">Source code →</a></div>
+      </div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>route-detour-optimizer · React</span></div>
+        <div class="screen" data-video="videos/route-detour-optimizer.mp4"><div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div><span data-i18n="p6.v">[Video 30 s · a trip is planned and the best stop appears on the map]</span></div></div>
+    </article>
     </div>
   </div>
 </section>
@@ -228,7 +245,7 @@
 <footer id="contact">
   <div class="inner">
     <div class="cols">
-      <div><h4 data-i18n="nav.projects">Projects</h4><ul><li><a href="index.html#projects">YouTube QA Chatbot</a></li><li><a href="index.html#projects">Review Intelligence Dashboard</a></li><li><a href="index.html#projects">CNN Transfer Learning</a></li><li><a href="index.html#projects">Fake News Classifier</a></li><li><a href="index.html#projects">Iron Kaggle</a></li></ul></div>
+      <div><h4 data-i18n="nav.projects">Projects</h4><ul><li><a href="index.html#projects">YouTube QA Chatbot</a></li><li><a href="index.html#projects">Review Intelligence Dashboard</a></li><li><a href="index.html#projects">CNN Transfer Learning</a></li><li><a href="index.html#projects">Fake News Classifier</a></li><li><a href="index.html#projects">Iron Kaggle</a></li><li><a href="index.html#projects">Route Detour Optimizer</a></li></ul></div>
       <div><h4 data-i18n="foot.profile">Profile</h4><ul><li><a href="career.html" data-i18n="nav.career">Career</a></li><li><a href="https://www.linkedin.com/in/jes%C3%BAs-ram%C3%ADrez-dur%C3%A1n-618083404">LinkedIn</a></li><li><a href="https://github.com/JTiiz">GitHub</a></li></ul></div>
       <div><h4 data-i18n="nav.contact">Contact</h4><ul><li><a class="mail" href="mailto:jesuramirezdur@gmail.com">jesuramirezdur@gmail.com</a></li><li data-i18n="foot.loc">Badajoz, Spain</li></ul></div>
     </div>
